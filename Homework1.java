@@ -16,7 +16,7 @@ public class Homework1{
     public static void staticInitArray(){
         int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
         //System.out.println(Arrays.toString(arr));
-        for (int var : arr) {
+        for (int var : arr) {//用for each读取，又叫增强for循环
             System.out.print(var+" ");
         }
     }
@@ -60,7 +60,7 @@ public class Homework1{
     //20的阶乘
     private static long factorial(int i){
         if(i <= 1){
-            return 1;
+            return 1L;
         }else{
             return i*factorial(i-1);
         }
@@ -70,7 +70,7 @@ public class Homework1{
     public static void multiplicationTable(){
         for(int i = 1; i <= 9; i++){
             for(int j = 1; j <= i; j++){
-                System.out.print(i+"*"+j+"="+i*j+"\t");
+                System.out.print(i+"*"+j+"="+(i*j)+"\t");
             }
             System.out.println();
         }
