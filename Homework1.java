@@ -5,14 +5,14 @@ public class Homework1{
         //multiplicationTable();
         //long ret = factorial(20);
         //System.out.println(ret);
-        // int[] arr = new int[]{6, 7, 2, 6, 11, 9, 10};
-        // quiceSort(arr, 0, arr.length-1);
-        // System.out.println(Arrays.toString(arr));
-        //使用数组静态初始化方式初始化一个大小为10的整型数组并输出。
-        staticInitArray();
+        int[] data = new int[]{1,3,2,9,7,4,6,8,20,17,25,21};
+        quickSort(data,0,data.length-1);
+        System.out.println(Arrays.toString(data));
+        //staticInitArray();
 
     }
 
+    //使用数组静态初始化方式初始化一个大小为10的整型数组并输出。
     public static void staticInitArray(){
         int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
         //System.out.println(Arrays.toString(arr));
@@ -22,39 +22,25 @@ public class Homework1{
     }
 
     //使用递归实现快速排序(Java实现) 
-    public static int PartSort(int[] arr, int left, int right){
-        int key = arr[right];
-        int start = left;
-        int end = right-1;
-
-        while(start < end){
-            while(start < end && arr[start] <= key){
-                start++;
-            }
-            while(start < end && arr[end] >= key){
+    public static int Partition(int[] arr, int start, int end) {
+        int key = arr[start];
+        while (start < end) {
+            while (arr[end] >= key && end > start)
                 end--;
-            }
-            if(start < end){
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
-            }
+            arr[start] = arr[end];
+            while (arr[start] <= key && end > start)
+                start++;
+            arr[end] = arr[start];
         }
-        //最后别忘记把基准值和相遇点交换
-	    if (start != right - 1){
-            int temp = arr[start];
-            arr[start] = arr[right-1];
-            arr[right-1] = temp;
-        }
+        arr[start] = key;
         return start;
     }
-    public static void quiceSort(int[] arr, int left, int right){
-        if(left >= right){
-            return;
+    public static void quickSort(int[] arr, int start, int end) {
+        if (start < end) {
+            int index = Partition(arr, start, end);
+            quickSort(arr, start, index - 1);
+            quickSort(arr, index + 1, end);
         }
-        int ret = PartSort(arr, left, right);
-        quiceSort(arr, left, ret);
-        quiceSort(arr, ret+1, right);
     }
 
     //20的阶乘
