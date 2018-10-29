@@ -22,7 +22,7 @@ class Singleton1{
         return s;
     }
 }
-
+//
 public class Test1 {
     public static void main(String[] args){
         Singleton1 singleton = Singleton1.getSingleton();
