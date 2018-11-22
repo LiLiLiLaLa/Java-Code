@@ -6,7 +6,7 @@ import javax.swing.text.DateFormatter;
 // 2）Child类为Father类的内部类，其中定义一个introFather()方法，方法中调用Father类的name属性。 
 // 3）定义一个测试类Test，在Test类的main()方法中，创建Child对象，并调用introFather ()方法。 
 // class Father{
-//     private String name = "Zhangjun";
+//     private String name  = "Zhangjun";
 //     public class Child{
 //         public void introFather(){
 //             System.out.println(Father.this.name);
