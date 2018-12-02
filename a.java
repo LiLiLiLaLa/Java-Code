@@ -61,3 +61,56 @@ System.out.println("a".compareTo("A"));//32
 System.out.println("A".compareTo("A"));//0
 System.out.println("AB".compareTo("AC"))；//-1
 System.out.println("刘".compareTo("杨"))；
+
+import java.lang.reflect.Constructor;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.lang.reflect.Field;
+import java.lang.String;
+
+class Person{
+    private int age;
+    //public int age;
+//    private String name;
+////    private int age;
+////    private Person(){}
+////    protected Person(String name,int age){
+////        this.name = name;
+////        this.age = age;
+////    }
+////    public String toString() {}
+//    public String getName(){return name;}
+//    public void setName(String name){this.name = name;}
+}
+
+
+public class Test {
+    public static void main(String[] args) throws Exception {
+        Class<Person> cls = Person.class;
+        //取得Field对象
+        Field field = cls.getDeclaredField("age");
+        //取得Person实例化对象
+        Person per = cls.newInstance();
+        //set&get
+        field.setAccessible(true);
+        per.age = 10;
+//        //取得Class对象
+//        Class<Person> cls = Person.class;
+//        //组装方法名称
+//        String setMethodName = "set"+initCap(args[0]);
+//        String getMethodName = "get"+initCap(args[0]);
+//        //取得Method对象
+//        Method steMethod = cls.getMethod(setMethodName,String.class);
+//        Method gteMethod = cls.getMethod(getMethodName);
+//        //取得Person实例化对象而后调用方法
+//        Person per = cls.newInstance();
+//        ...
+////        Class<Person> cls = Person.class;
+////        //取得有参构造
+////        Constructor constructor = cls.getConstructor(String.class,int.
+class);
+////        //实例化对象
+////        //相当于调用Person per = new Person("邹鸡儿"，18)；
+////        Person per = (Person) constructor.newInstance("邹鸡儿",18);
+////        System.out.println(per);
+    }
+}
