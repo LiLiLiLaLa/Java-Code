@@ -16,6 +16,7 @@ class Person{
         if(this == obj){
             return true;
         }
+		
         //3.obj确实是Person对象，比较二者属性内容
         //4.向下转型取得Person属性值
         Person per = (Person)obj;
