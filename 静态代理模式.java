@@ -9,6 +9,7 @@ class BuyHouseImpl implements BuyHouse {
     }
 }
 
+
 /**
  * 这是买房子的代理类
  */
