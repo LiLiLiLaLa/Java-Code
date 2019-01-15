@@ -103,3 +103,30 @@ public class BeanUtil {
         return str.substring(0,1).toUpperCase()+str.substring(1);
     }
 }
+
+
+
+
+//这里的IntDemo实际上就是int数据类型的包装类
+class IntDemo{
+    private int num;
+    public IntDemo(int num){
+        this.num = num;
+    }
+    public int intValue(){
+        return this.num;
+    }
+}
+
+public class test{
+    public static void main(String[] args) {
+        //子类对象向上转型
+        Object obj = new IntDemo(55);
+        //向下转型
+        IntDemo temp = (IntDemo)obj;
+        //取出里面的基本数据类型操作
+        System.out.println(temp.intValue());
+    }
+}
+//输出
+//55
