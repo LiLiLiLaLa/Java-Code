@@ -98,3 +98,115 @@ public class Test{
         out.close();
     }
 }
+
+
+
+//import java.sql.SQLOutput;
+//
+//class Person{
+//    private String name;
+//    private int age;
+//    public Person(String name,int age){
+//        this.name = name;
+//        this.age = age;
+//    }
+//    @Override
+//    public String toString(){
+//        return "名字：" + this.name + "  年龄：" + this.age;
+//    }
+//}
+//
+//public class test{
+//    public static void main(String[] args) {
+//        fun(new Person("xiaokeai",18));//名字：xiaokeai  年龄：18
+//        fun("Hello");//Hello
+//    }
+//    public static void fun(Object obj){
+//        System.out.println(obj.toString());//
+默认输出对象调用的就是toString()方法
+//    }
+//}
+//class Person{
+//    private String name;
+//    private int age;
+//    public Person(String name, int age){
+//        this.name = name;
+//        this.age = age;
+//    }
+//    @Override
+//    public String toString(){
+//        return "名字：" + this.name + "  年龄：" + this.age;
+//    }
+//    @Override
+//    public boolean equals(Object obj){
+//        //对象判空
+//        if(obj == null){
+//            return false;
+//        }
+//        //判断是不是当前对象
+//        if(this == obj){
+//            return true;
+//        }
+//        //判断是不是Person类对象
+//        if(!(obj instanceof Person)){
+//            return false;
+//        }
+//        //是当前类对象
+//        //向下转型比较属性值
+//        Person person = (Person)obj;
+//        return this.name.equals(person.name) && this.age == person.age;
+//    }
+//}
+//
+//public class test{
+//    public static void main(String[] args) {
+//        Person per1 = new Person("zoujier",18);
+//        Person per2 = new Person("zoujier",18);
+//        System.out.println(per1.equals(per2));
+//    }
+//}
+//public class test{
+//    public static void main(String[] args) {
+//        //object接收数组对象，向上转型
+//        Object obj = new int[]{1,2,3,4,5,6};
+//        //向下转型，需要强转
+//        int[] data = (int[])obj;
+//        for(int i = 0;i < data.length; i ++){
+//            System.out.println(data[i]);
+//        }
+//    }
+//}
+////1
+////2
+////3
+////4
+////5
+////6
+interface IMessage{
+    public void getMessage();
+}
+
+class MessageImpl implements IMessage{
+    @Override
+    public String toString(){
+        return "i am father";
+    }
+    public void getMessage(){
+        System.out.println("我是大帅哥");
+    }
+}
+
+public class test{
+    public static void main(String[] args) {
+        //子类向父接口转型
+        IMessage msg = new MessageImpl();
+        //接口向Object转型
+        Object obj = msg;
+        System.out.println(obj);
+        //强制转换类型
+        IMessage temp = (IMessage) obj;
+        temp.getMessage();
+    }
+}
+//i am father
+//我是大帅哥
