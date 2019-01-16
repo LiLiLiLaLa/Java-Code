@@ -210,3 +210,88 @@ public class test{
 }
 //i am father
 //我是大帅哥
+
+////这里的IntDemo实际上就是int数据类型的包装类
+//class IntDemo{
+//    private int num;
+//    public IntDemo(int num){
+//        this.num = num;
+//    }
+//    public int intValue(){
+//        return this.num;
+//    }
+//}
+//
+//public class test{
+//    public static void main(String[] args) {
+//        //子类对象向上转型
+//        Object obj = new IntDemo(55);
+//        //向下转型
+//        IntDemo temp = (IntDemo)obj;
+//        //取出里面的基本数据类型操作
+//        System.out.println(temp.intValue());
+//    }
+//}
+////输出
+////55
+
+//public boolean equals(Object obj){
+//    //自反性
+//        if(obj == this){
+//            return true;
+//        }
+//        //非空性
+//        else if(obj == null){
+//            return false;
+//        }
+//        else if(!(obj instanceof Person)){
+//            return false;
+//        }
+//        //比较属性
+//        Person per = (Person)obj;
+//        return per.age.equals(this.age) && per.name.equals(this.name);
+//        }
+
+//import java.util.*;
+//
+//public class test{
+//    public static void main(String[] args) {
+//        List<String> list = new ArrayList<>();
+//        list.add("Hello");
+//        list.add("My");
+//        list.add("Son");
+//        //取得ArrayList的双向迭代器
+//        ListIterator<String> iterator = list.listIterator();
+//        while(iterator.hasNext()){
+//            System.out.println(iterator.next());
+//        }
+//        System.out.println("------------------------");
+//        while(iterator.hasPrevious()){
+//            System.out.println(iterator.previous());
+//        }
+//    }
+//}
+
+import java.util.*;
+
+public class test{
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+        vector.add("Hello");
+        vector.add("My");
+        vector.add("Son");
+        Enumeration<String> enumeration = vector.elements();
+        while(enumeration.hasMoreElements()){
+            System.out.println(enumeration.nextElement());
+        }
+    }
+}
+//输出
+//Hello
+//My
+//Son
+
+    final void checkForComodification(){
+        if(modCout != expectedModCount)
+            throw new ConcurrentModificationExeption();
+    }
