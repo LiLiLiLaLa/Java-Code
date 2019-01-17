@@ -295,3 +295,50 @@ public class test{
         if(modCout != expectedModCount)
             throw new ConcurrentModificationExeption();
     }
+	
+	
+//public class test{
+//    public static void main(String[] args) {
+//        Integer num = new Integer(55);//装箱
+//        int data = num.intValue();//拆箱
+//        System.out.println(data);
+//    }
+//}
+////输出
+////55
+//public class test{
+//    public static void main(String[] args) {
+//        //自动装箱
+//        Integer x = 55;
+//        //可以直接利用包装类对象操作
+//        System.out.println(++x);
+//    }
+//}
+////输出
+////56
+public class test{
+    public static void main(String[] args) {
+//        Integer num1 = new Integer(10);
+//        Integer num2 = new Integer(10);
+//        System.out.println(num1 == num2);//false
+//        System.out.println(num1 == new Integer(10));//false
+//        System.out.println(num1.equals(num2));//true
+//        System.out.println(num1.equals(new Integer(10)));//true
+//        String str = "123";//String类型
+//        int num = Integer.parseInt(str);
+//        System.out.println(num);//123
+//        String str = "123" ; // String类型
+//        double num = Double.parseDouble(str) ;
+//        System.out.println(num);//123.0
+//        String str = "123aassa" ; // String类型
+//        double num = Double.parseDouble(str) ;
+//        System.out.println(num);
+//        String str = "346" ; // String类型
+//        boolean num = Boolean.parseBoolean(str) ;
+//        System.out.println(num);//false
+        String str = String.valueOf(100) ;
+        System.out.println(str);//100
+    }
+}
+//Exception in thread "main" java.lang.NumberFormatException: For input string
+: "123aassa"
