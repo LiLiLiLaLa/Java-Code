@@ -94,16 +94,16 @@
 //    循环体;
 //        }
 
-public class Test{
-    public static void main(String[] args) {
-        for (int i = 1; i <= 9; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j + "*" + i + "=" + i*j + "\t");
-            }
-            System.out.println();
-        }
-    }
-}
+//public class Test{
+//    public static void main(String[] args) {
+//        for (int i = 1; i <= 9; i++) {
+//            for (int j = 1; j <= i; j++) {
+//                System.out.print(j + "*" + i + "=" + i*j + "\t");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
 //输出
 //1*1=1
 //1*2=2	2*2=4
@@ -114,3 +114,59 @@ public class Test{
 //1*7=7	2*7=14	3*7=21	4*7=28	5*7=35	6*7=42	7*7=49
 //1*8=8	2*8=16	3*8=24	4*8=32	5*8=40	6*8=48	7*8=56	8*8=64
 //1*9=9	2*9=18	3*9=27	4*9=36	5*9=45	6*9=54	7*9=63	8*9=72	9*9=81
+
+//public static 方法返回值类型 方法名称(参数类型 参数1，参数类型 参数2....参数类型 参数n){
+//    方法体代码;
+//    return 返回值;
+//}
+
+//public class Test{
+//    public static void main(String[] args) {
+//        System.out.println(add(5,5));
+//        System.out.println(add(5,5,555));
+//    }
+//    public static int add(int x,int y){
+//        return x + y;
+//    }
+//    public static int add(int x,int y,int z){
+//        return x + y + z;
+//    }
+//}
+////10
+////565
+
+//public class Test{
+//    public static void main(String[] args) {
+//        myPrint(1);
+//        myPrint(2);
+//        myPrint(3);
+//        myPrint(4);
+//    }
+//    public static void myPrint(int x){
+//        if(x == 2){
+//            return;//若执行此语句，则此语句后面的代码不能被执行，方法调用结束
+//        }else{
+//            System.out.println(x);
+//        }
+//    }
+//    //输出
+//    //1
+//    //3
+//    //4
+//}
+
+////递归实现1到100的叠加
+//public class Test{
+//    public static void main(String[] args) {
+//        System.out.println(sum(100));
+//    }
+//    public static int sum(int num){
+//        if(num == 1){
+//            return 1;
+//        }else{
+//            return num + sum(num - 1);
+//        }
+//    }
+//}
+////5050
+
