@@ -170,3 +170,85 @@
 //}
 ////5050
 
+////数据类型[] 数组名称 = new 数据类型[长度];
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        //开辟一个长度为3的整型数组
+//        //int[] x = new int[3];
+//        int[] x = null;
+//        x = new int[3];
+//        System.out.println(x.length);
+//        //给数组放入值
+//        x[0] = 1;
+//        x[1] = 3;
+//        x[2] = 5;
+//        for (int i = 0; i < x.length; i++) {
+//            //通过循环控制索引访问数组元素
+//            System.out.println(x[i]);
+//        }
+//    }
+//}
+////输出
+////3
+////1
+////3
+////5
+
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] x = null;
+//        int[] temp = null;
+//        x = new int[3];
+//        //System.out.println(x.length);
+//        x[0] = 1;
+//        x[1] = 3;
+//        x[2] = 5;
+//        //如果要出现引用传递，不要出现[]
+//        temp = x;
+//        //修改数据
+//        temp[0] = 99;
+//        System.out.println(x[0]);//99
+//    }
+//}
+
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] x = new int[]{1,2,5,55};
+//        System.out.println(x.length);
+//        for (int i = 0; i < x.length; i++) {
+//            System.out.println(x[i]);
+//        }
+//    }
+//}
+////输出
+////4
+////1
+////2
+////5
+////55
+
+public class Test{
+    public static void main(String[] args) {
+        //数组并不是等列数组
+        int[][] data = new int[][]{
+                {1,2,3},{4,5},{6,7,8,9}
+        };
+        //在进行输出时要使用双循环
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                System.out.println("data["+i+"]["+j+"]="+data[i][j]);
+            }
+        }
+    }
+}
+//输出
+//data[0][0]=1
+//data[0][1]=2
+//data[0][2]=3
+//data[1][0]=4
+//data[1][1]=5
+//data[2][0]=6
+//data[2][1]=7
+//data[2][2]=8
+//data[2][3]=9
