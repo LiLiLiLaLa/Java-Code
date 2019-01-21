@@ -252,3 +252,25 @@ public class Test{
 //data[2][1]=7
 //data[2][2]=8
 //data[2][3]=9
+
+public class Test{
+    public static void main(String[] args) {
+        int[] data = init();
+        printArray(data);
+    }
+
+    public static int[] init(){
+        return new int[]{1,2,3,4};
+    }
+
+    public static void printArray(int[] data){
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(data[i]);
+        }
+    }
+}
+//输出
+//1
+//2
+//3
+//4
