@@ -274,3 +274,96 @@ public class Test{
 //2
 //3
 //4
+
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] data = init();
+//        printArray(data);
+//    }
+//
+//    public static int[] init(){
+//        return new int[]{1,2,3,4};
+//    }
+//
+//    public static void printArray(int[] data){
+//        for (int i = 0; i < data.length; i++) {
+//            System.out.println(data[i]);
+//        }
+//    }
+//}
+////输出
+////1
+////2
+////3
+////4
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] data = new int[]{1,2,3,4};
+//        printArray(data);
+//    }
+//    public static void printArray(int[] data){
+//        for (int i = 0; i < data.length; i++) {
+//            System.out.println(data[i]);
+//        }
+//    }
+//}
+////1
+////2
+////3
+////4
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] data = init();
+//        bigger(data);
+//        printArray(data);
+//    }
+//    //定义一个数组返回方法
+//    public static int[] init(){
+//        return new int[]{1,2,3,4};
+//    }
+//    //定义一个数组打印方法
+//    public static void printArray(int[] data){
+//        for (int i = 0; i < data.length; i++) {
+//            System.out.println(data[i]);
+//        }
+//    }
+//    //定义方法将数组中每个值扩大5倍
+//    public static void bigger(int[] data){
+//        for (int i = 0; i < data.length; i++) {
+//            data[i] = data[i] * 5;
+//        }
+//    }
+//}
+////5
+////10
+////15
+////20
+public class Test{
+    public static void main(String[] args) {
+        int[] intData = new int[]{1,62,31,24};
+        char[] charData = new char[]{'a','z','b','d'};
+        java.util.Arrays.sort(intData);
+        java.util.Arrays.sort(charData);
+        printArray(intData);
+        printArray(charData);
+    }
+    public static void printArray(int[] data){
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(data[i]);
+        }
+    }
+    //方法重载
+    public static void printArray(char[] data){
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(data[i]);
+        }
+    }
+}
+//1
+//24
+//31
+//62
+//a
+//b
+//d
+//z
