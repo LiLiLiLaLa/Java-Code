@@ -137,3 +137,152 @@ public class Test{
 
     }
 }
+
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] data = new int[]{1,4,3,4,55,77,6,9,8};
+//        //假定第一个元素为最大值
+//        int max = data[0];
+//        //假定第一个元素为最小值
+//        int min = data[0];
+//        int sum = 0;
+//        double avg = 0d;
+//        for (int i = 0; i < data.length; i++) {
+//            sum += data[i];
+//            if(data[i] > max){
+//                max = data[i];
+//            }
+//            if(data[i] < min){
+//                min = data[i];
+//            }
+//        }
+//        avg = (double)sum / data.length;
+//        System.out.println("最大值为：" + max);
+//        System.out.println("最小值为：" + min);
+//        System.out.println("总和为：" + sum);
+//        System.out.println("平均值为：" + avg);
+//    }
+//}
+////最大值为：77
+////最小值为：1
+////总和为：167
+////平均值为：18.555555555555557
+
+//public class Test{
+//    public static void main(String[] args) {
+//        processData(new int[]{1,4,3,4,55,77,6,9,8});
+//    }
+//    public static void processData(int[] data){
+//        double[] result = new double[4];
+//        //最大值
+//        result[0] = data[0];
+//        //最小值
+//        result[1] = data[0];
+//        //总和
+//        result[2] = 0d;
+//        //平均值
+//        result[3] = data[0];
+//        for (int i = 0; i < data.length; i++) {
+//            result[2] += data[i];
+//            if(data[i] > result[0]){
+//                result[0] = data[i];
+//            }
+//            if(data[i] < result[1]){
+//                result[1] = data[i];
+//            }
+//        }
+//        result[3] = result[2]/data.length;
+//        System.out.println("最大值为：" + result[0]);
+//        System.out.println("最小值为：" + result[1]);
+//        System.out.println("总和为：" + result[2]);
+//        System.out.println("平均值为：" + result[3]);
+//    }
+//}
+////最大值为：77.0
+////最小值为：1.0
+////总和为：167.0
+////平均值为：18.555555555555557
+
+//public class Test {
+//    public static void main(String[] args) {
+//        processData(new int[]{1,4,3,4,55,77,6,9,8});
+//    }
+//    public static void processData(int[] temp){
+//        double[] result = new double[4] ;
+//        result[0] = temp[0] ; // result[0] means the max of the array
+//        result[1] = temp[0] ; // result[1] means the min of the array
+//        result[2] = temp[0] ; // result[2] means the sum of the array
+//        result[3] = temp[0] ; // result[3] means the avg of tha array
+//        for (int i =0 ; i < temp.length;i++){
+//            result[2] += temp[i] ;
+//            if (temp[i]>result[0]){
+//                result[0] = temp[i] ;
+//            }
+//            if (temp[i]<result[1]){
+//                result[1] = temp[i] ;
+//            }
+//        }
+//        result[3] = result[2]/temp.length ;
+//        System.out.println("最大值为:" +result[0]);
+//        System.out.println("最小值为:"+result[1]);
+//        System.out.println("总和为："+result[2]);
+//        System.out.println("平均值为："+result[3]);
+//    }
+//}
+
+//class Person{
+//    private String name;
+//    private int age;
+//    public Person(String name,int age){
+//        this.name = name;
+//        this.age = age;
+//    }
+//    public void getInfo(){
+//        System.out.println("姓名：" + name + "、年龄：" + age);
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        //数组动态初始化，每个元素都是其对应数据类型的默认值
+//        Person[] per = new Person[3];
+//        per[0] = new Person("邹大宝",6);
+//        per[1] = new Person("邹二宝",4);
+//        per[2] = new Person("邹小宝",2);
+//        for(int i = 0; i < per.length; i ++){
+//            per[i].getInfo();
+//        }
+//    }
+//}
+////姓名：邹大宝、年龄：6
+////姓名：邹二宝、年龄：4
+////姓名：邹小宝、年龄：2
+
+class Person{
+    private String name;
+    private int age;
+    public Person(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
+    public void getInfo(){
+        System.out.println("姓名：" + name + "、年龄：" + age);
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        //数组动态初始化，每个元素都是其对应数据类型的默认值
+        Person[] per = new Person[]{
+            new Person("邹大宝",6),
+            new Person("邹二宝",4),
+            new Person("邹小宝",2)
+        };
+        for(int i = 0; i < per.length; i ++){
+            per[i].getInfo();
+        }
+    }
+}
+//姓名：邹大宝、年龄：6
+//姓名：邹二宝、年龄：4
+//姓名：邹小宝、年龄：2
