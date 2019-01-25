@@ -491,3 +491,79 @@ public class Test{
 //7
 //8
 //9
+
+//class 类名称{
+//    属性1;
+//    属性2;
+//    属性n...;
+//
+//    方法1(){}
+//    方法2(){}
+//    ...
+//    方法n(){}
+//}
+
+//class Person{
+//    public String name;
+//    public int age;
+//
+//    public Person(String name,int age){
+//        this.name = name;
+//        this.age = age;
+//    }
+//
+//    public String getPersonInfo(){
+//        return "姓名：" + name + "、年龄：" + age;
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        Person per1 = new Person("邹大",18);
+//        System.out.println(per1.name);
+//        System.out.println(per1.age);
+//        System.out.println(per1.getPersonInfo());
+//    }
+//}
+////邹大
+////18
+////姓名：邹大、年龄：18
+//class Person{
+//    String name;
+//    int age;
+//    public void getPersonInfo(){
+//        System.out.println("姓名：" + name + "、年龄：" + age);
+//    }
+//}
+class Person{
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+    public void getPersonInfo(){
+        System.out.println("姓名：" + name + "、年龄：" + age);
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Person per = new Person();
+        per.setName("tim");
+        per.setAge(18);
+        per.getPersonInfo();
+    }
+}
+//姓名：tim、年龄：18
