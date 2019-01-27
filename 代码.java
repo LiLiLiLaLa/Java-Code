@@ -130,3 +130,125 @@ public class test{
 }
 //输出
 //55
+
+//class HelloA {
+//    //构造方法
+//    public HelloA(){
+//        System.out.println("Hello A!父类构造方法");
+//    }
+//    //非静态代码块
+//    {
+//        System.out.println("i'm A class.父类非静态代码块");
+//    }
+//    //静态代码块
+//    static{
+//        System.out.println("static A 父类静态代码块");
+//    }
+//}
+//
+//public class Test extends HelloA {
+//    //构造方法
+//    public Test(){
+//        System.out.println("Hello B! 构造方法");
+//    }
+//    //非静态代码块
+//    {
+//        System.out.println("i'm B class.非静态代码块");
+//    }
+//    //静态代码块
+//    static{
+//        System.out.println("static B 静态代码块");
+//    }
+//    public static void main(String[] args) {
+//        System.out.println("---start---");
+//        new Test();
+//        new Test();
+//        System.out.println("---end---");
+//    }
+//}
+
+//public class Test{
+//    public static void main(String[] args) {
+//        {//直接使用{}定义，普通方法块
+//            int x = 10;
+//            System.out.println("x = " + x);//10
+//        }
+//        int x = 100;
+//        System.out.println("x = " + x);//100
+//    }
+//}
+
+//class Person{
+//    {//定义在类中，不加任何修饰符，构造块
+//        System.out.println("1.Person类的构造块");
+//    }
+//    public Person(){
+//        System.out.println("2.Person类的构造方法");
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        new Person();
+//        new Person();
+//    }
+//}
+////1.Person类的构造块
+////2.Person类的构造方法
+////1.Person类的构造块
+////2.Person类的构造方法
+
+//class Person{
+//    {//定义在类中，不加任何修饰，构造块
+//        System.out.println("1.Person类的构造块");
+//    }
+//    public Person(){
+//        System.out.println("2.Person类的构造方法");
+//    }
+//    static{//用static修饰，定义在非主类中，是非主类的静态代码块
+//        System.out.println("3.非主类的静态代码块");
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        System.out.println("start");
+//        new Person();
+//        new Person();
+//        System.out.println("end");
+//    }
+//}
+////start
+////3.非主类的静态代码块
+////1.Person类的构造块
+////2.Person类的构造方法
+////1.Person类的构造块
+////2.Person类的构造方法
+////end
+
+//public class Test{
+//    {//没有任何修饰，构造块
+//        System.out.println("1.构造块");
+//    }
+//    public Test(){
+//        System.out.println("2.构造方法");
+//    }
+//    static{//static修饰，定义在主类中的静态代码块
+//        System.out.println("3.主类静态块");
+//    }
+//
+//    public static void main(String[] args) {
+//        System.out.println("start");
+//        new Test();
+//        new Test();
+//        System.out.println("end");
+//    }
+//}
+////3.主类静态块
+////start
+////1.构造块
+////2.构造方法
+////1.构造块
+////2.构造方法
+////end
+
