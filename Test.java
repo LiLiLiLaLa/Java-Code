@@ -342,3 +342,97 @@ public class test{
 }
 //Exception in thread "main" java.lang.NumberFormatException: For input string
 : "123aassa"
+
+//class Outer{
+//    private String msg = "Hello World";
+//    //定义一个内部类
+//    class Inner{
+//        //在内部类中定义一个普通方法
+//        public void print(){
+//            //调用msg属性
+//            System.out.println(msg);
+//        }
+//    }
+//    //在外部类中定义一个方法，该方法负责产生内部类对象并且调用print()方法
+//    public void fun(){
+//        Inner in = new Inner();
+//        in.print();
+//    }
+//}
+
+//class Outer{
+//    private String msg = "Hello World";
+//    //定义如下方法取得私有属性msg
+//    public String getMsg(){
+//        return msg;
+//    }
+//    //定义当前对象的fun方法获得一个Inner的对象并调用print()方法
+//    public void fun(){
+//        Inner in = new Inner(this);
+//        in.print();
+//    }
+//}
+//
+//class Inner{
+//    private Outer out = new Outer();
+//    public Inner(Outer out){
+//        this.out = out;
+//    }
+//    public void print(){
+//        System.out.println(out.getMsg());
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args){
+//        Outer out = new Outer();
+//        out.fun();
+//    }
+//}
+//////Hello World
+
+//class Outter{
+//    private static String msg = "Hello World";
+//    //定义一个静态内部类
+//    static class Inner{
+//        public void print(){
+//            System.out.println(msg);
+//        }
+//    }
+//    //在外部类中定义一个方法，该方法负责产生内部类对象并且调用print()方法
+//    public void fun(){
+//        Inner in = new Inner();
+//        in.print();
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        Outter.Inner in = new Outter.Inner();
+//        in.print();
+//    }
+//}
+////Hello World
+
+class Outter{
+    private static String msg = "Hello World";
+    public void fun(int num){
+        class Inner{
+            public void print(){
+                System.out.println("num:" + num);
+                System.out.println("msg:" + msg);
+            }
+        }
+        //产生内部类并调用方法
+        new Inner().print();
+    }
+}
+
+public class Test{
+    public static void main(String[] args) {
+        Outter out = new Outter();
+        out.fun(22);
+    }
+}
+//num:22
+//msg:Hello World
