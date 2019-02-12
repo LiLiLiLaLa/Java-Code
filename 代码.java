@@ -252,3 +252,134 @@ public class test{
 ////2.构造方法
 ////end
 
+//abstract class Person{
+//    private String name;
+//    public String getName(){
+//        return this.name;
+//    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//    //{}为方法体，所有抽象方法上不包含方法体
+//    public abstract void getPersonInfo();//抽象方法
+//}
+//
+//class Student extends Person{
+//    public void getPersonInfo(){
+//        System.out.println("叫我小可爱！");
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        //子类向上转型获得实例化对象
+//        Person per = new Student();
+//        //调用被子类覆写的方法
+//        per.getPersonInfo();
+//    }
+//}
+////叫我小可爱！
+
+abstract class Person{
+    private String name ; // 属性
+    public String getName(){ // 普通方法
+        return this.name;
+    }
+    public void setName(String name){
+        this.name = name ;
+    }
+    // {}为方法体，所有抽象方法上不包含方法体
+    public abstract void getPersonInfo() ; //抽象方法
+
+    public static Person getInstance(){
+        //定义抽象类的子类（内部类）
+        class Student extends Person{
+            //覆写抽象方法
+            public void getPersonInfo(){
+                System.out.println("我是靓仔");
+            }
+        }
+        return new Student();
+    }
+}
+public class Test{
+    public static void main(String[] args) {
+        Person per = Person.getInstance();
+        per.getPersonInfo();
+    }
+}
+//我是靓仔
+
+//abstract class Person{
+//    private String name;
+//    public Person(){
+//        System.out.println("Person");
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    // {}为方法体，所有抽象方法上不包含方法体
+//    public abstract void getPersonInfo() ; //抽象方法
+//}
+//
+//class Studet extends Person{
+//    public Studet(){
+//        System.out.println("Student");
+//    }
+//    public void getPersonInfo(){
+//        //空实现。
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        new Studet();
+//    }
+//}
+////Person
+////Student
+//
+//abstract class A{
+//    public A(){//4.调用父类构造
+//        this.print();//5.子类已经覆写的抽象方法
+//    }
+//    public abstract void print();
+//}
+//
+//class B extends A{
+//    private int num = 100;
+//    public B(int num){//2.调用子类构造方法
+//        super();//3.首先要调用父类构造
+//        this.num = num;//8.此时num被赋值
+//    }
+//    public void print(){//6.此时num还没被赋值但是被调用
+//        System.out.println(this.num);//7.打印出num数据类型默认值
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        B b = new B(28);//1.实现子类实例化
+//        b.print();//10.打印出赋值后的num
+//    }
+//}
+////0
+////28
+
+//abstract class A{
+//    //其中没有抽象方法
+//    public void print(){
+//        //空实现，普通方法
+//    }
+//}
+//public class Test{
+//    public static void main(String[] args) {
+//        A a = new A() ; // 错误: A是抽象的;，依旧无法实例化
+//    }
+//}
