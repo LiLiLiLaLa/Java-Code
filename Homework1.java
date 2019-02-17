@@ -62,3 +62,113 @@ public class Homework1{
         }
     }
 }
+
+//interface IMessage{
+//    public static final String MSG = "我是靓仔";//全局常量
+//    public abstract void print();//抽象方法
+//}
+//
+//interface INews{
+//    public abstract String getName();
+//}
+//
+//abstract class New{
+//    //抽象类中方法前面的abstract不能省略，否则就是普通方法
+//    public abstract void setName();
+//}
+//
+//class MessageImpl extends New implements IMessage,INews{
+//    @Override
+//    public void setName() {
+//        System.out.println("我是靓仔！");
+//    }
+//
+//    @Override
+//    public String getName() {
+//        return IMessage.MSG;//访问常量都建议加上类名称
+//    }
+//
+//    @Override
+//    public void print() {
+//        System.out.println(getName());
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        IMessage m = new MessageImpl();//子类向上转型
+//        m.print();//调用被子类覆写过的方法
+//        INews n = (INews) m;
+//        System.out.println(n.getName());
+//        New news = (New) m ;
+//        news.setName();
+//    }
+//}
+////我是靓仔
+////我是靓仔
+////我是靓仔！
+
+//interface A{
+//    public void printA();
+//    static interface D{
+//        public void print();
+//    }
+//}
+//
+//interface B{
+//    public void printB();
+//}
+//
+//interface C extends A,B{
+//    //接口多继承
+//    public void print();
+//}
+//
+//class Impl implements A.D{
+//    @Override
+//    public void print(){}
+//}
+
+/**
+ * 定义一个USB标准
+ */
+interface USB{
+    /**
+     * 安装驱动
+     */
+    public void setUp();
+
+    /**
+     * 进行工作
+     */
+    public void work();
+}
+/**
+ * 定义电脑类
+ */
+class Computer{
+    /**
+     * 插入USB设备
+     * @param usb
+     */
+    public void plugin(USB usb){
+        usb.setUp();//安装
+        usb.work();//工作
+    }
+}
+
+/**
+ * 定义一个USB设备
+ */
+class UDisk implements USB{
+    @Override
+    public void setUp() {
+        System.out.println("安装打印机驱动");
+    }
+
+    @Override
+    public void work() {
+        System.out.println("打印机开始工作");
+    }
+}
+
