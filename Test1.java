@@ -236,3 +236,86 @@ public class Test{
 //______________
 //[MAIN]方法Person@4554617c
 //[PRINT]方法Person@4554617c
+
+
+interface Computer{
+    void printComputer();
+}
+
+class MacbookProComputer implements Computer{
+    @Override
+    public void printComputer() {
+        System.out.println("MackbookPro");
+    }
+}
+
+class SurfaceBookComputer implements Computer{
+    @Override
+    public void printComputer() {
+        System.out.println("SurfeceBook");
+    }
+}
+
+interface OperatingSystem{
+    void printSystem();
+}
+
+class MacOsSystem implements OperatingSystem{
+    @Override
+    public void printSystem() {
+        System.out.println("This is mac os");
+    }
+}
+
+class Windows8System implements OperatingSystem{
+    @Override
+    public void printSystem() {
+        System.out.println("This is window8");
+    }
+}
+
+interface ProdectionFactory{
+    Computer createComputer();
+    OperatingSystem createSystem();
+}
+
+class AppleFactory implements ProdectionFactory{
+    @Override
+    public Computer createComputer() {
+        return new MacbookProComputer();
+    }
+
+    @Override
+    public OperatingSystem createSystem() {
+        return new MacOsSystem();
+    }
+}
+
+class MsFactory implements ProdectionFactory{
+    @Override
+    public Computer createComputer() {
+        return new MacbookProComputer();
+    }
+
+    @Override
+    public OperatingSystem createSystem() {
+        return new MacOsSystem();
+    }
+}
+
+public class Client{
+    public void buyComputer(Computer computer){
+        computer.printComputer();
+    }
+    public void use(OperatingSystem s){
+        s.printSystem();
+    }
+    public static void main(String[] args) {
+        Client c = new Client();
+        ProdectionFactory factory = new AppleFactory();
+        Computer computer = factory.createComputer();
+        OperatingSystem system = factory.createSystem();
+        c.buyComputer(computer);
+        c.use(system);
+    }
+}
