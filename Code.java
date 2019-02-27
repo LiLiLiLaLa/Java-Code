@@ -44,3 +44,22 @@ public class Code{
         subject.buyComputer();
     }
 }
+
+package xpu.com.test;
+
+import xpu.com.java.Message;
+
+public class Demo {
+    public static void main(String[] args) {
+        Message message = new Message();
+        message.print();
+    }
+}
+
+package xpu.com.java;
+//
+public class Message {
+    public void print(){
+        System.out.println("[Message] Hello Package");
+    }
+}
