@@ -101,3 +101,80 @@ public class SingletonTest{
     }
 }
 //我是小可爱
+
+//class Singleton{
+//    //在类的内部可以访问私有结构，所以可以在类的内部产生实例化对象
+//    private static Singleton instance = new Singleton();
+//    //私有化构造函数
+//    private Singleton(){}
+//    public static Singleton getInstance(){
+//        return instance;
+//    }
+//    public void print(){
+//        System.out.println("我是小可爱");
+//    }
+//}
+//
+//public class SingletonTest{
+//    public static void main(String[] args) {
+//        Singleton singleton = null;//声明对象
+//        singleton = Singleton.getInstance();
+//        singleton.print();
+//    }
+//}
+//
+////我是小可爱
+
+////懒汉式单例（用时再new）
+//class Singleton{
+//    private static Singleton singleton;
+//    private Singleton(){}
+//    public Singleton getInstance(){
+//        if(singleton == null){
+//            singleton = new Singleton();
+//        }
+//        return singleton;
+//    }
+//}
+
+
+////饿汉式单例（上来就new）
+//class Singleton{
+//    private final static Singleton SINGLETON = new Singleton();
+//    private Singleton(){}
+//    public Singleton getSingleton(){
+//        return SINGLETON;
+//    }
+//}
+
+//class Sex{
+//    private String title;
+//    public static final int MALE = 1;
+//    private static final int FEMALE = 2;
+//    private static final Sex MA = new Sex("男");
+//    private static final Sex FEMA = new Sex("女");
+//    private Sex(String s){
+//        this.title = title;
+//    }
+//    public static Sex getInstance(int flag){
+//        switch (flag){
+//            case MALE:
+//                return MA;
+//            case FEMALE:
+//                return FEMA;
+//            default:
+//                return null;
+//        }
+//    }
+//    public String toString(){
+//        return this.title;
+//    }
+//}
+
+//try{
+//    有可能出现异常的语句
+//}[catch(异常类 对象){
+//}...]
+//[finally{
+//    异常的出口
+//}]
