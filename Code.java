@@ -178,3 +178,70 @@ public class SingletonTest{
 //[finally{
 //    异常的出口
 //}]
+
+//public class Test{
+//    public static void main(String[] args) throws Exception{
+//        System.out.println(calculate(10,0));
+//    }
+//
+//    public static int calculate(int x, int y) throws Exception{
+//        return x/y;
+//    }
+//}
+
+//public class Test{
+//    public static void main(String[] args) {
+//        try{
+//            throw new Exception("抛个异常试试");
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+//}
+//
+//public class Test{
+//    public static void main(String[] args) {
+//        try{
+//            System.out.println(calculate(10,0));
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public static int calculate(int x,int y) throws Exception{
+//        int result = 0;
+//        System.out.println("计算开始前**");
+//        try{
+//            result = x / y;
+//        }finally {
+//            System.out.println("计算结束**");
+//        }
+//        return result;
+//    }
+//}
+
+//public class Test{
+//    public static void main(String[] args) {
+//        String str = "100";
+//        int num = Integer.parseInt(str);
+//        System.out.println(num * 2);
+//    }
+//}
+////200
+
+class AddException extends Exception {
+    public AddException(String str) {
+        super(str);
+    }
+}
+
+public class Test{
+    public static void main(String[] args) throws AddException {
+        int num1 = 20;
+        int num2 = 30;
+        if(num1 + num2 == 50){
+            throw new AddException("错误的操作");
+        }
+    }
+}
+
