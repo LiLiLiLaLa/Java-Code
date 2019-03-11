@@ -74,6 +74,7 @@ class Solution {
     }
 }
 
+3.第三题：无重复字符的最长子串
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         int len = 0;
@@ -96,5 +97,47 @@ class Solution {
             len = Math.max(len, right - left);
         }
         return len;
+    }
+}
+
+4.第四题：查找两个有序数组的中位数
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int len1 =  nums1.length;        
+        int len2 = nums2.length;
+        int size = len1 + len2;
+        if(size % 2 == 1){
+            return finfK(nums1, 0, len1, nums2, 0, len2, size / 2 + 1);
+        }else{
+            return (finfK(nums1, 0, len1, nums2, 0, len2, size / 2 + 1) + finfK(nums1, 0, len1, nums2, 0, len2, size / 2)) / 2;
+        }
+    }
+    
+    //定义方法，在两个有序数组中查找第K个数
+    public double finfK(int[] nums1, int start1, int len1, int[] nums2, int start2, int len2, int k){
+        //规定短的数组为nums1
+        if((len1 - start1) > (len2 - start2)){
+            return finfK(nums2, start2, len2, nums1, start1, len1, k);
+        }
+        //如果短的数组为空，直接在长的数组中返回下标K-1就是第K个元素
+        if(len1 - start1 == 0){
+            return nums2[k - 1];
+        }
+        //两个有序数组中第1个数就是二个数组中两个下标1的数的较小一个
+        if(k == 1){
+            return Math.min(nums1[start1], nums2[start2]);
+        }
+        //较短的数组可能越界，p表示该数组应该查找到的位置
+        int p = start1 + Math.min(len1 - start1, k / 2);
+        //较长数组中查找K- 1个数的剩余部分，查找到下标为q的位置
+        int q = start2 + k - p + start1;
+        //较小的部分被丢弃
+        if(nums1[p - 1] < nums2[q - 1]){
+            return finfK(nums1, p , len1, nums2, start2, len2, k - p + start1);
+        }else if(nums1[p - 1] > nums2[q - 1]){
+            return finfK(nums1, start1 , len1, nums2, q, len2, k - q + start2);
+        }else{
+            return nums1[p - 1];
+        }
     }
 }
