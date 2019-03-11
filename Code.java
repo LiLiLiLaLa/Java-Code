@@ -1,3 +1,4 @@
+
 interface ISubject{
     public void buyComputer(); //核心功能是买电脑
 }
