@@ -141,3 +141,46 @@ class Solution {
         }
     }
 }
+
+15.第十五题：三数之和
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        //定义数组，每个数组里面存放一个List放置相加为0的三个元素
+        List<List<Integer>> list = new ArrayList<List<Integer>>();
+        //将数组排序，相同的元素连续出现，这样容易排除重复情况
+        Arrays.sort(nums);
+        //固定一个元素，另外两个元素在其后部分查找，在固定元素之后只剩一个元素时停止查找
+        for(int i = 0; i < nums.length - 1; i ++){
+            //第一个元素遇见重复的元素直接往后走
+            if(i > 0 && nums[i] == nums[i - 1]){
+                continue;
+            }
+            //定义左右两个元素下标作为查找剩余两个数的索引
+            int left = i + 1;
+            int right = nums.length - 1;
+            //当左小于右说明后面的元素还没走完
+            while(left < right){
+                //首元素固定，有序队列中，相加大于0，右下标左移，如果小于0，坐下标右移
+                if(nums[i] + nums[left] + nums[right] > 0){
+                    right --;
+                }else if(nums[i] + nums[left] + nums[right] < 0){
+                    left ++;
+                }else{
+                    //放入数组中
+                    //Arrays调用asList将参数线性存放返回一个List
+                    list.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    left ++;
+                    right --;
+                    //判断
+                    while(left < right && nums[left] == nums[left - 1]){
+                        left ++;
+                    }
+                    while(left < right && nums[right] == nums[right + 1]){
+                        right --;
+                    }
+                }
+            }
+        }
+        return list;
+    }
+}
