@@ -166,3 +166,62 @@ public class Test{
 }
 //我是学生
 //我是工人
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Test {
+    public static int[] exchangeAB(int[] AB) {
+        AB[0] = (AB[0]) ^ (AB[1]);
+        AB[1] = (AB[0]) ^ (AB[1]);
+        AB[0] = (AB[0]) ^ (AB[1]);
+        return AB;
+    }
+
+    public static void print(int[] AB){
+        for (int i = 0; i < AB.length; i++) {
+            System.out.println(AB[i]);
+        }
+    }
+
+//    public static String[] getGray(int n) {
+//        //定义数组存放元素
+//        ArrayList<Integer> arr = new ArrayList<Integer>(1 << n);
+//        arr.add(0);
+//        for (int i = 0; i < n; i++) {
+//            int high_bit = 1 << i;
+//            for (int j = arr.size() - 1; j >= 0; j --) {
+//                //给二进制数前面加1，就用这个二进制数与二的这个二进制数的位数次方相与
+//                arr.add(high_bit | arr.get(j));
+//            }
+//        }
+//        String[] str_arr = new String[arr.size()];
+//        for (int i = 0; i < arr.size(); i++) {
+//            str_arr[i] = "\""+arr.get(i) + "\"";
+//        }
+//        return str_arr;
+//    }
+    public static String[] getGray(int n) {
+//        while (n <= 0) {
+//            return null;
+//        }
+        String[] result = null;
+        if (n == 1) {
+            result = new String[]{"0", "1"};
+        } else {
+            String[] strs = getGray(n - 1);
+            result = new String[2 * strs.length];
+            for (int i = 0; i < strs.length; i++) {
+                result[i] = "0" + strs[i];
+                result[result.length - 1 - i] = "1" + strs[i];
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        String[] gray = getGray(2);
+        System.out.println(Arrays.toString(gray));
+    }
+}
