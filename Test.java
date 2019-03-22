@@ -436,3 +436,88 @@ public class Test{
 }
 //num:22
 //msg:Hello World
+
+//import java.util.Stack;
+//
+//public class Test {
+//    Stack<Integer> stack1 = new Stack<>();
+//    Stack<Integer> stack2 = new Stack<>();
+//
+//    public void push(int node) {
+//        //入栈压入第一个栈
+//        stack1.push(node);
+//    }
+//
+//    public int pop() {
+//        Integer re = null;
+//        //如果栈二不为空，要把里面的元素先弹出
+//        if(!stack2.empty()){
+//            re = stack2.pop();
+//        }else{
+//            //栈二为空时，把栈一中的元素全部弹入栈二，然后再出栈
+//            while(!stack1.empty()){
+//                re = stack1.pop();
+//                stack2.push(re);
+//            }
+//            //栈二中有数了就直接弹出栈二的元素
+//            if(!stack2.empty()){
+//                re = stack2.pop();
+//            }
+//        }
+//        //如果栈一此时也为空，直接返回re(null)，否则返回re
+//        return re;
+//    }
+//
+//
+//    public static void main(String[] args) {
+//        Test s = new Test();
+//        for (int i = 0; i < 100; i++) {
+//            s.push(i);
+//        }
+//        for (int i = 0; i < 100; i++) {
+//            int pop = s.pop();
+//            System.out.println(pop);
+//        }
+//    }
+//}
+
+import java.util.Stack;
+class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
+
+}
+
+public class Test{
+
+    public void Mirror(TreeNode root) {
+        //头结点为空直接退出
+        if(root == null){
+            return;
+        }
+        //创建栈存放结点
+        Stack<TreeNode> stack = new Stack<>();
+        //将头节点入栈
+        stack.push(root);
+        //栈不为空就找栈的第一个节点
+        while(!stack.isEmpty()){
+            TreeNode root1 = stack.pop();
+            //交换左右节点
+            TreeNode tmp = root1.right;
+            root1.right = root1.left;
+            root1.left = tmp;
+            //如果左右节点不为空就在入栈，此时左右节点已经交换，先入右节点相当于先入左节点，后出放到右节点位置
+            if(root1.right != null){
+                stack.push(root1.right);
+            }
+            if(root1.left != null){
+                stack.push(root1.left);
+            }
+        }
+    }
+}
