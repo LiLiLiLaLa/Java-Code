@@ -1,21 +1,21 @@
 import java.util.Scanner;
-//¶¨ÒåµÄ²úÆ·³éÏóÀà
+//å®šä¹‰çš„äº§å“æŠ½è±¡ç±»
 abstract class Computer{
 	public abstract void fun();
 }
-//¾ßÌå²úÆ·×ÓÀà
+//å…·ä½“äº§å“å­ç±»
 class SufeBook extends Computer{
 	public void fun(){
 		System.out.println("This is SufeBook");
 	}
 }
-//¾ßÌå²úÆ·×ÓÀà
+//å…·ä½“äº§å“å­ç±»
 class MacBookPro extends Computer{
 	public void fun(){
 		System.out.println("This is MacBookPro");
 	}
 }
-//¹¤³§Àà
+//å·¥å‚ç±»
 class ComputerFactory{
 	private ComputerFactory(){}
 	public static Computer getComuter(String pcType){
@@ -32,7 +32,7 @@ class ComputerFactory{
 public class Demo{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("ÇëÊäÈë±Ê¼Ç±¾");
+		System.out.println("è¯·è¾“å…¥ç¬”è®°æœ¬");
 		Computer  ret = ComputerFactory.getComuter(sc.next());
 		ret.fun();
 	}
