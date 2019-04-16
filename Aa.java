@@ -1,6 +1,5 @@
 public class Aa{
     public static void main(String[] args){
-
         System.out.println(strMakeOfNum("abc"));
     }
     //判断给定字符串是否由数字组成
@@ -109,6 +108,7 @@ public class Aa{
 //}
 ////爸爸！
 ////儿子！
+
 
 //class Person{
 //    public void print(){
