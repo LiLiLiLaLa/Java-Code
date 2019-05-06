@@ -184,3 +184,37 @@ class Solution {
         return list;
     }
 }
+
+147.第一百四十七题：对链表进行插入排序
+class Solution {
+    public ListNode insertionSortList(ListNode head) {
+    //空链表或只有一个结点时不用排序直接返回
+        if(head == null || head.next == null){
+            return head;
+        }
+        //定义一个新的链表头部
+        ListNode pre = new ListNode(-1);
+        //用临时变量存放新链表的头部
+        ListNode ans = pre;
+        //cur在原链表向后遍历作为每次即将新插入的节点
+        ListNode cur = head;
+        //内次取出原链表中一个节点插入新的链表
+        while(cur != null){
+            //每次循环将pre重置为头结点，保证每次从前往后遍历
+            pre = ans;
+            //当pre.next.val大于等于cur.val或者pre.next为null时结束这一趟遍历，否则pre要不断后移
+            while(pre.next != null && pre.next.val < cur.val){
+                pre= pre.next;
+            }
+            //此时pre要么走到了最后，要么找到了val大于等于cur的节点，不管如何都应该把cur插入到pre后
+            //先保存cur的下一个节点，保证原链表走到哪里被记住
+            ListNode tmp = cur.next;
+            //将cur插入到pre后面
+            cur.next = pre.next;
+            pre.next = cur;
+            //cur回归原链表
+            cur = tmp;
+        }
+        return ans.next;
+    }
+}
