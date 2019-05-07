@@ -218,3 +218,37 @@ class Solution {
         return ans.next;
     }
 }
+
+396.第三百九十六题：旋转函数
+class Solution {
+    public int maxRotateFunction(int[] A) {
+        //这个题主要从数学角度，找规律
+        //arr={a,b,c,d}
+        //F(0) = 0a+1b+2c+3d
+        //F(1) = 0d+1a+2b+3c
+        //F(2) = 0c+1d+2a+3b
+        //F(3) = 0b+1c+2d+3a
+        //sum = a+b+c+d
+        //F(1) = F(0)+a+b+c-3d = F(0)+sum-4d
+        //F(2) = F(1)+d+a+b-3c = F(1)+sum-4c
+        //F(3) = F(2)+c+d+a-3b = F(2)+sum-4b
+        //得出F(k) = F(k-1)+sum-arr.length*arr[a.length-k]
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+            sum += A[i];
+        }
+        //先计算F(0)
+        int data = 0;
+        for (int i = 0; i < A.length; i++) {
+            data += i * A[i];
+        }
+        //默认max = F(0)
+        int max = data;
+        for (int k = 1; k < A.length; k++) {
+            data = data + sum - (A.length) * A[A.length - k];
+            //max取较大一个
+            max = (max > data) ? max : data;
+        }
+        return max;
+    }
+}
