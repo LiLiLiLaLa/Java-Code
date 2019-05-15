@@ -225,3 +225,50 @@ public class Test {
         System.out.println(Arrays.toString(gray));
     }
 }
+
+//class Person<T>{
+//    @Deprecated
+//    public Person(){}
+//    public Person(String name){}
+//    @Deprecated
+//    public void fun(){}
+//}
+//
+//public class Demo{
+//    @SuppressWarnings({"rawtype","unused"})
+//    public static void main(String[] args) {
+//        Person person = new Person();//明确标记出过期
+//    }
+//}
+
+interface IMessage{
+    public default void fun(){
+        //追加的普通方法，所以需要有方法体
+        System.out.println("Hello Tim");
+    }
+    //可以直接由接口名调用
+    public static IMessage getInstance(){
+        return new MessageImpl();
+    }
+    public void print();
+}
+
+class MessageImpl implements IMessage{
+    @Override
+    public void print() {
+        System.out.println("Hello Tom");
+    }
+}
+
+public class Demo{
+    public static void main(String[] args) {
+        IMessage iMessage = IMessage.getInstance();
+        System.out.println(iMessage);
+        iMessage.print();;
+        iMessage.fun();
+    }
+}
+//输出
+//MessageImpl@74a14482
+//Hello Tom
+//Hello Tim
