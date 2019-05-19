@@ -11,6 +11,12 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <form action="RequestDemo4" method="GET">
+    <input name="userName"/>
+    <input type="submit" value="提交"/>
+  </form>
+
+  <hr>
+  <a href="RequestDemo4">RequestDemo4</a>
   </body>
 </html>
