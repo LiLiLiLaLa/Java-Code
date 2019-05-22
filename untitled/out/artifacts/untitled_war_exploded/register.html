@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /**
+         * 点击超链接或者图片，需要换一张
+         * 1.给超链接和图片绑定单击事件
+         * 2.重新设置图片的src属性值
+         */
+        window.onload = function () {
+            //获取图片对象
+            var img = document.getElementById("Check");
+            //绑定单击事件
+            img.onclick = function () {
+                //加时间戳，防止路径一样直接访问缓存，那样图片没有变化
+                var date = new Date().getTime();
+                img.src = "/untitled/CheckCode?" + date;
+            }
+
+            //获取超链接对象
+            var img1 = document.getElementById("Change");
+            //绑定单击事件
+            img1.onclick = function () {
+                //加时间戳，防止路径一样直接访问缓存，那样图片没有变化
+                var date = new Date().getTime();
+                img.src = "看不清换一张？" + date;
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+<img id = "Check" src = "/untitled/CheckCode" />
+
+<a id = "change" href = "">看不清换一张？</a>
+</body>
+</html>
