@@ -242,6 +242,8 @@ public class Test{
         }
     }
 }
+
+
 //输出
 //data[0][0]=1
 //data[0][1]=2
