@@ -18,5 +18,13 @@
 
   <hr>
   <a href="RequestDemo4">RequestDemo4</a>
+
+  <%
+    System.out.println("Hello JSP!!!");//打印到控制台
+  %>
+
+  <!--会打印在浏览器-->
+  <h1>hi~ jsp！！！</h1>
+
   </body>
 </html>
