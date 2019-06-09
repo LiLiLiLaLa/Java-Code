@@ -272,3 +272,97 @@ public class Demo{
 //MessageImpl@74a14482
 //Hello Tom
 //Hello Tim
+
+//public class Test{
+//    public static void main(String[] args) {
+//        System.out.println(add(1,3,4));//随意传递的内容，随意个数
+//        System.out.println(add(new int[]{1,2,3}));//可变参数可以接收数组
+//        System.out.println(add(new int[]{1,4,6}));
+//        System.out.println(add(new int[]{1,1,3,4,4}));
+//    }
+//
+//    public static int add(int...data){
+//        int result = 0;
+//        for (int i = 0; i < data.length; i++) {
+//            result += data[i];
+//        }
+//        return result;
+//    }
+//}
+//public class Test{
+//    public static void main(String[] args) {
+//        System.out.println(add("Hello"));
+//        System.out.println(add("Hello",1,4,5,6));
+//        System.out.println(add("Hello",new int[]{1,2,3}));
+//    }
+//    public static int add(String msg,int ... data) {
+//        int result = 0 ;
+//        for (int i = 0; i < data.length; i++) {
+//            result += data[i] ;
+//        }
+//        return result ;
+//    }
+//}
+
+//public class Test{
+//    public static void main(String[] args) {
+//        int[] data = new int[] { 1, 2, 3, 4, 5 }; // 原始数组
+//        for (int i = 0; i < data.length; i++) {
+//            System.out.println(data[i]); // 通过循环控制索引下标
+//        }
+//    }
+//}
+
+//public class Test {
+//    public static void main(String[] args) {
+//        int[] data = new int[] { 1, 2, 3, 4, 5 }; // 原始数组
+//        for (int i : data) { // 将数组中每个元素赋值给i
+//            System.out.println(i); // 这种循环避免了角标的问题
+//        }
+//    }
+//}
+
+//class MyMath {
+//    public static int add(int x, int y) {
+//        return x + y;
+//    }
+//    public static int sub(int x, int y) {
+//        return x - y;
+//    }
+//}
+//
+//public class Test {
+//    public static void main(String[] args) {
+//        System.out.println(MyMath.add(10, 20));
+//        System.out.println(MyMath.sub(30, 10));
+//    }
+//}
+
+//package www.xpu.java.util;
+//public class MyMath {
+//    public static int add(int x, int y) {
+//        return x + y;
+//    }
+//    public static int sub(int x, int y) {
+//        return x - y;
+//    }
+//}
+
+//package www.xpu.java.test;
+//
+//import www.xpu.java.util.MyMath;
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        System.out.println(MyMath.add(10, 20));
+//        System.out.println(MyMath.sub(30, 10));
+//    }
+//}
+
+//package www.xpu.java.test;
+//import static www.xpu.java.util.MyMath.*; // 静态导入
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        System.out.println(add(10, 20));
+//        System.out.println(sub(30, 10));
+//    }
+//}
