@@ -15,8 +15,10 @@
     -->
 
     <!--配置监听器-->
+    <!--
     <listener>
         <listener-class>xpu.edu.web.Listener.ListenerDemo</listener-class>
     </listener>
+    -->
 
 </web-app>
