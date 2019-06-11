@@ -252,3 +252,37 @@ class Solution {
         return max;
     }
 }
+
+837.第八百三十七题：新21点
+class Solution {
+    public double new21Game(int N, int K, int W) {
+        if(K == 0) {
+            return 1;
+        }
+        //1-W每个选择的概率
+        double everOne = 1.f / W;
+        //其中满足<=N的数量是
+        int lessNCount = N - K + 1;
+        //我们记录算出来的所有开始分数的概率
+        double[] probability = new double[K];
+        probability[K - 1] = lessNCount * everOne;
+        for (int currK = K - 2; currK >= 0; currK --) {
+            double currValue = probability[currK + 1];
+            //也就是说currK是在currK-1的基础上减去currK+W+1，加上currK+1，其中currK+1或者currK+W+1都是我们已经计算过的
+            currValue += (everOne * currValue);
+            //满足这个条件说明减去的数是在<=n范围内，>n的数不会加到结果概率中的，内部为什么要乘everOne?因为你选到这个数的概率就是这么多，我们当前需要乘了。
+            if(currK + W + 1 <= N) {
+                //满足这个条件说明减去的数是递归获得的，因为分数<k会继续抽取
+                if(currK + W + 1 < K) {
+                    currValue -= everOne * probability[currK + W + 1];
+                }
+                //否则就是>=k，也就是不需要继续抽取的情况，那么概率是一个固定值
+                else {
+                    currValue -= everOne * 1;
+                }
+            }
+            probability[currK] = currValue;
+        }
+        return probability[0];
+    }
+}
