@@ -184,8 +184,216 @@
 ////输出
 ////x = 东经80度,y = 北纬20度
 
-class MyClass{
-    public <T> void testMethod(T t) {
+//class MyClass{
+//    public <T> void testMethod(T t) {
+//        System.out.println(t);
+//    }
+//}
+
+//class MyClass<T>{
+//    public void testMethod1(T t) {
+//        System.out.println(t);
+//    }
+//    public <T> T testMethod2(T t) {
+//        return t;
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        MyClass<String> myClass = new MyClass<>();
+//        myClass.testMethod1("hello 泛型类");
+//        Integer i = myClass.testMethod2(100);
+//        System.out.println(i);
+//    }
+//}
+//
+//class MyClass<T>{
+//    public void testMethod1(T t) {
+//        System.out.println(t);
+//    }
+//    public <E> E testMethod2(E e) {
+//        return e;
+//    }
+//}
+
+//class Message<T> {
+//    private T message ;
+//    public T getMessage() {
+//        return message;
+//    }
+//    public void setMessage(T message) {
+//        this.message = message;
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        Message<String> message = new Message() ;
+//        message.setMessage("我是小靓仔");
+//        fun(message);
+//    }
+//    public static void fun(Message<String> temp){
+//        System.out.println(temp.getMessage());
+//    }
+//}
+////输出
+////我是小靓仔
+
+//public class Test {
+//    public static void main(String[] args) {
+//        Message<Integer> message = new Message() ;
+//        message.setMessage(99);
+//        fun(message); // 出现错误，只能接收String
+//    }
+//    public static void fun(Message<String> temp){
+//        System.out.println(temp.getMessage());
+//    }
+//}
+
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        Message<Integer> message = new Message() ;
+//        message.setMessage(55);
+//        fun(message);
+//    }
+//    // 此时使用通配符"?"描述的是它可以接收任意类型，但是由于不确定类型，所以无法修改
+//    public static void fun(Message<?> temp){
+//        //temp.setMessage(100); 无法修改！
+//        System.out.println(temp.getMessage());
+//    }
+//}
+
+//class Message<T extends Number> { // 设置泛型上限
+//    private T message ;
+//    public T getMessage() {
+//        return message;
+//    }
+//    public void setMessage(T message) {
+//        this.message = message;
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        Message<Integer> message = new Message() ;
+//        message.setMessage(55);
+//        fun(message);
+//    }
+//    public static void fun(Message<? extends Number> temp){
+//        System.out.println(temp.getMessage());
+//    }
+//}
+
+//class Message<T> {
+//    private T message ;
+//    public T getMessage() {
+//        return message;
+//    }
+//    public void setMessage(T message) {
+//        this.message = message;
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        Message<String> message = new Message() ;
+//        message.setMessage("Hello World");
+//        fun(message);
+//    }
+//    public static void fun(Message<? super String> temp){
+//        temp.setMessage("aa!");
+//        System.out.println(temp.getMessage());
+//    }
+//}
+
+//interface IMessage<T> {
+//    // 在接口上定义了泛型
+//    public void print(T t) ;
+//}
+
+//interface IMessage<T> { // 在接口上定义了泛型
+//    public void print(T t) ;
+//}
+//class MessageImpl<T> implements IMessage<T> {
+//    @Override
+//    public void print(T t) {
+//        System.out.println(t);
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        IMessage<String> msg = new MessageImpl() ;
+//        msg.print("Hello World");
+//    }
+//}
+
+////在子类实现接口的时候明确给出具体类型
+//interface IMessage<T> {
+//    public void print(T t) ;
+//}
+//class MessageImpl implements IMessage<String> {
+//    @Override
+//    public void print(String t) {
+//        System.out.println(t);
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        IMessage<String> msg = new MessageImpl() ;
+//        msg.print("Hello World");
+//    }
+//}
+
+//class MyClass<T>{
+//    private T message;
+//    public T getMessage() {
+//        return message;
+//    }
+//    public void setMessage(T message) {
+//        this.message = message;
+//    }
+//    public void testMethod1(T t) {
+//        System.out.println(t);
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        MyClass<String> myClass1 = new MyClass<>();
+//        MyClass<Integer> myClass2 = new MyClass<>();
+//        System.out.println(myClass1.getClass() == myClass2.getClass());
+//    }
+//}
+////输出
+////true
+
+import java.lang.reflect.Field;
+
+class MyClass<T,E>{
+    private T message;
+    private E text;
+    public E getText() {
+        return text;
+    }
+    public void setText(E text) {
+        this.text = text;
+    }
+    public T getMessage() {
+        return message;
+    }
+    public void setMessage(T message) {
+        this.message = message;
+    }
+    public void testMethod1(T t) {
         System.out.println(t);
     }
 }
+public class Test {
+    public static void main(String[] args) {
+        MyClass<String,Integer> myClass1 = new MyClass<>();
+        Class cls = myClass1.getClass();
+        Field[] fields = cls.getDeclaredFields();
+        for (Field field : fields) {
+            System.out.println(field.getType());
+        }
+    }
+}
+//输出
+//class java.lang.Object
+//class java.lang.Object
