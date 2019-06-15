@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery绑定事件</title>
+    <script src = "js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            //获取按钮，调用toggle方法
+            $("#btn").toggle(function () {
+                //改变div背景色为绿色
+                $("#mydiv").css("backgroundColor","green");
+            },function () {
+                //改变背景色为粉色
+                $("#mydiv").css("backgroundColor","pink");
+            });
+        });
+    </script>
+
+</head>
+<body>
+<input id="btn" type="button" value="事件切换">
+<div id="myDiv" style="width:300px;hight:300px;background: pink">
+    点击按钮变成绿色，再次点击变粉色
+</div>
+</body>
+</html>
