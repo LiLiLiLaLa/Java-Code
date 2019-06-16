@@ -253,6 +253,30 @@ class Solution {
     }
 }
 
+543.第五百四十三题：二叉树的直径
+class Solution {
+    //全局变量保留最大的直径值
+    private int res =0;
+    public int diameterOfBinaryTree(TreeNode root) {
+        maxDiameter(root);
+        return res;
+    }
+
+    public int maxDiameter(TreeNode root)
+    {
+        if (root == null){
+            return 0;
+        }
+      //递归左字数和右子树
+        int r = maxDiameter(root.right);
+        int l = maxDiameter(root.left);
+        //更新直径
+        res = Math.max(res,l+r);
+        //返回的是该节点所在的层数，由下往上，左右子树层数大的一个再加一是当前节点层数
+        return Math.max(l,r)+1;
+    }
+}
+
 837.第八百三十七题：新21点
 class Solution {
     public double new21Game(int N, int K, int W) {
