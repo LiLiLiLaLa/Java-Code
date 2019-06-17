@@ -277,6 +277,40 @@ class Solution {
     }
 }
 
+763.第七百六十三题：划分字母区间
+class Solution {
+    public List<Integer> partitionLabels(String S) {
+        //当字符串未复制时直接返回空的List
+        if (S == null || S.length() == 0) {
+            return Collections.emptyList();
+        }
+        //index维护各字母的最大索引位置
+        int[] index = new int[26];
+        for (int i = 0; i < S.length(); i++) {
+            //同一个字母减'a'的值相等，所以会映射到index数组的相同位置，然后index存入刷新的i，那么index中保存的是每个字母在字符串中最靠后的索引位置
+            index[S.charAt(i) - 'a'] = i;
+        }
+        //保存当前搜索区间的最大索引
+        int maxIndex = 0;
+        //保存当前搜索区间的开始索引
+        int start = 0;
+        //结果集
+        List<Integer> list = new LinkedList<>();
+        for (int i = 0; i < S.length(); i++) {
+            //第一个字母最后出现的位置之前所有字母在字符串中最靠后位置就是一个完整的分隔
+            //maxIndex保存本此搜索区间的最大索引
+            maxIndex = Math.max(maxIndex, index[S.charAt(i) - 'a']);
+            //如果当前位置就是索引区间最大值，则将当前索引减去本区间开始位置再+1就是本区间字母个数
+            if (i == maxIndex) {
+                list.add(maxIndex - start + 1);
+                //当前位置后移成为新的搜索期间
+                start = i + 1;
+            }
+        }
+        return list;
+    }
+}
+
 837.第八百三十七题：新21点
 class Solution {
     public double new21Game(int N, int K, int W) {
