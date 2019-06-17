@@ -310,3 +310,48 @@ class Solution {
         return probability[0];
     }
 }
+
+989.第九百八十九题：数组形式的整数加法
+class Solution {
+    public List<Integer> addToArrayForm(int[] A, int K) {
+        //定义新的数组存储返回值
+        List<Integer> list=new ArrayList<>();
+        int num=A.length-1;
+        int jinwei=0;
+        //当K为0，数组A无效且进位为0时直接返回空的数组list，list为空，是否翻转无所谓
+        //但凡K不为0或者A数组有效或者当前还有进位时，都要再次进入循环
+        while(K!=0||num>=0||jinwei!=0){
+            int temp=0;
+            //tmp从后往前存储A数组当前位置的值
+            if(num>=0){
+                temp+=A[num];
+                num--;
+            }
+            //K不为0表示要和数组去加
+            if(K!=0){
+                //用数组A当前位加上K对10取余即得到K对应位的值
+                temp+=K%10;
+                //K对10取整抛去已经合并过的最低位
+                K=K/10;
+            }
+            //先判断当前是否有上次进位的值，有的话加到tmp
+            if(jinwei==1){
+                temp+=jinwei;
+                jinwei=0;
+            }
+            //要不要向下一次计算
+            if(temp>=10){
+                //进位，大于10进位，list保存个位值
+                list.add(temp-10);
+                jinwei=1;
+            }else{
+                //不进位
+                list.add(temp);
+                jinwei=0;
+            }
+        }
+        //因为list将A数组和K的合并结果后往保存，所以翻转
+        Collections.reverse(list);
+        return list;
+    }
+}
