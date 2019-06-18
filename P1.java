@@ -501,3 +501,77 @@ class Solution {
         return max;
     }
 }
+
+-- 查询年龄大于32的人
+SELECT * FROM student WHERE age > 32;
+-- 查询年龄大于等于32的人
+SELECT * FROM student WHERE age >= 32;
+-- 查询年龄等于32的人
+SELECT * FROM student WHERE age = 32;
+-- 查询年龄不等于32的人
+SELECT * FROM student WHERE age != 32;
+SELECT * FROM student WHERE age <> 32;
+
+-- 查询年龄大于32小于56的人
+SELECT * FROM student WHERE age > 32 && age < 56;
+SELECT * FROM student WHERE age > 32 AND age < 56;
+
+-- 查询年龄大于32小于56的人（包含32和56）
+SELECT * FROM student WHERE age BETWEEN 32 AND 56;
+
+--年龄为32,56,44的
+SELECT * FROM student WHERE age = 32 OR age = 56 OR age = 44;
+SELECT * FROM student WHERE age = 32 || age = 56 || age = 44;
+SELECT * FROM student WHERE age IN (32,56,44);
+
+-- 查询没有英语成绩的人
+SELECT * FROM student WHERE english = NULL;
+SELECT * FROM student WHERE english IS NULL;
+SELECT * FROM student WHERE english IS NOT NULL;
+
+-- 查询名字以小开头的
+SELECT * FROM student WHERE NAME LIKE '小%';
+
+-- 查询名字中第二个字是可的
+SELECT * FROM student WHERE NAME LIKE '_可%';
+
+-- 查询名字是三个字的
+SELECT * FROM student WHERE NAME LIKE '___';
+
+-- 查询名字带可的
+SELECT * FROM student WHERE NAME LIKE '%可%';
+
+-- 按english升序排名
+SELECT * FROM student ORDER BY english;
+SELECT * FROM student ORDER BY english ASC;
+
+-- 按english降序排名
+SELECT * FROM student ORDER BY english DESC;
+
+-- 按english升序排名，如果英语成绩一样按照数学降序排名
+SELECT * FROM student ORDER BY english,math DESC ;
+
+-- 一共多少人
+SELECT COUNT(*) FROM student;-- 只要该条数据中有一个属性不为空count时就不看做NULL
+
+-- 数学最大值
+SELECT MAX(math) FROM student;
+-- 数学最小值
+SELECT MIN(math) FROM student;
+-- 计算数学总和
+SELECT SUM(math) FROM student;
+-- 计算数学平均分
+SELECT AVG(math) FROM student;、
+
+-- 按照性别分组，分别查询男女同学的数学平均分和男女生人数
+SELECT sex,AVG(math),COUNT(NAME) FROM student GROUP BY sex;
+
+-- 按照性别分组，分别查询男女同学的数学平均分和男女生人数，数学低于30不参与分组
+SELECT sex,AVG(math),COUNT(NAME) FROM student WHERE math > 30 GROUP BY sex;
+
+-- 按照性别分组，分别查询男女同学的数学平均分和男女生人数，数学低于30不参与分组，分组之后人数大于3再显示
+SELECT sex,AVG(math),COUNT(NAME) FROM student WHERE math > 30 GROUP BY sex HAVING COUNT(NAME) > 3;
+
+-- 每页显示三条数据
+SELECT * FROM student LIMIT 0,3;
+SELECT * FROM student LIMIT 3,3;
