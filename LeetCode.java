@@ -185,6 +185,40 @@ class Solution {
     }
 }
 
+16.第十六题：最接近的三数之和
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+         // 先排序，这样固定一个数，另外两个数采用头尾指针法会更快
+        Arrays.sort(nums);
+        // 定义一个数，用于不断刷新保存最接近目标的值
+        int closeNum = nums[0] + nums[1] + nums[2];
+        //固定第一个数
+        for (int i = 0; i < nums.length - 2; i++) {
+            //剩下两个数一个从固定数的下一位往后，一个从数组最后往前
+            int l = i + 1, r = nums.length - 1;
+            while (l < r){
+                int threeSum = nums[l] + nums[r] + nums[i];
+                //刷新closeNum
+                if (Math.abs(threeSum - target) < Math.abs(closeNum - target)) {
+                    closeNum = threeSum;
+                }
+                //当最接近目标值的数大于目标数，那么数组尾部指针前移找更小的，反之则前面的指针往后移动找更大的组合
+                if (threeSum > target) {
+                    r--;
+                } else if (threeSum < target) {
+                    l++;
+                } else {
+                    // 如果已经等于target的话, 肯定是最接近的，直接输出
+                    return target;
+                }
+
+            }
+
+        }
+        return closeNum;
+    }
+}
+
 147.第一百四十七题：对链表进行插入排序
 class Solution {
     public ListNode insertionSortList(ListNode head) {
@@ -342,6 +376,33 @@ class Solution {
             probability[currK] = currValue;
         }
         return probability[0];
+    }
+}
+
+ 
+921.第九百二十一题：使括号有效的最少添加
+class Solution {
+    public int minAddToMakeValid(String S) {
+        char[] c = S.toCharArray();
+        //left记录需要与'('匹配的')'数
+        int left = 0;
+        //left记录需要与')'匹配的'('数
+        int right = 0;
+        for (int i = 0; i < c.length; i++) {
+            //出现一个左括号需要一个右括号相配，left++
+            if ('(' == c[i]) {
+                left++;
+            } else {
+                //出现右括号时判断左括号此时需要的右括号数是否为0，不为0真好出现了右括号，给left--就好，否则需要一个与右括号相配的左括号，right要++
+                if(left > 0){
+                    left--;
+                }else{
+                    right++;
+                }
+            }
+        }
+        //返回需要的左括号数加需要的右括号数
+        return left + right;
     }
 }
 
