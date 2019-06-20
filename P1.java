@@ -575,3 +575,64 @@ SELECT sex,AVG(math),COUNT(NAME) FROM student WHERE math > 30 GROUP BY sex HAVIN
 -- 每页显示三条数据
 SELECT * FROM student LIMIT 0,3;
 SELECT * FROM student LIMIT 3,3;
+
+CREATE TABLE sttu(
+	id INT,
+	NAME VARCHAR(20) NOT NULL-- name非空
+);
+
+-- 去掉表的约束
+ALTER TABLE sttu MODIFY NAME VARCHAR(20);
+
+-- 创建完表再添加非空约束
+ALTER TABLE sttu MODIFY NAME VARCHAR(20) NOT NULL;
+
+DROP TABLE sttu;
+
+-- 创建表时添加唯一约束
+CREATE TABLE sttu(
+	id INT,
+	NAME VARCHAR(20) UNIQUE-- 唯一约束
+);
+
+-- 删除唯一约束
+ALTER TABLE sttu DROP INDEX NAME;-- 很多时候唯一约束也叫唯一索引
+
+-- 建成表后添加唯一约束
+ALTER TABLE sttu MODIFY NAME VARCHAR(20) UNIQUE;
+
+DROP TABLE sttu;
+
+-- 创建表时添加主键约束
+CREATE TABLE sttu(
+	id INT PRIMARY KEY,
+	NAME VARCHAR(20)-- 唯一约束
+);
+
+-- 删除主键约束
+ALTER TABLE sttu DROP PRIMARY KEY;
+
+-- 创建表后添加主键约束
+ALTER TABLE sttu MODIFY id INT PRIMARY KEY;
+
+
+DROP TABLE sttu;
+
+-- 创建表时添加主键约束并完成自增长
+CREATE TABLE sttu(
+	id INT PRIMARY KEY AUTO_INCREMENT,-- 添加主键自增长
+	NAME VARCHAR(20)-- 唯一约束
+);
+
+INSERT INTO sttu VALUES(NULL,'ddd');
+
+INSERT INTO sttu VALUES(10,'ddd');
+INSERT INTO sttu VALUES(NULL,'ddd');
+
+-- 删除自动增长
+ALTER TABLE sttu MODIFY id INT;
+
+-- 建表后添加自动增长
+ALTER TABLE sttu MODIFY id INT AUTO_INCREMENT;
+INSERT INTO sttu VALUES(NULL,'ddd');
+
