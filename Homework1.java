@@ -172,3 +172,329 @@ class UDisk implements USB{
     }
 }
 
+//class MyThread extends Thread{
+//    private String title ;
+//    public MyThread(String title) {
+//        this.title = title;
+//    }
+//
+//    @Override
+//    public void run() {
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(this.title + ",i = " + i);
+//        }
+//    }
+//}
+
+//class MyThread implements Runnable {
+//    private String title ;
+//    public MyThread(String title) {
+//        this.title = title;
+//    }
+//
+//    @Override
+//    public void run() {
+//        for (int i = 0; i < 10 ; i++) {
+//            System.out.println(this.title+",i = " + i);
+//        }
+//    }
+//}
+//
+//public class Test {
+//    public static void main(String[] args) {
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("Hello World");
+//            }
+//        }).start();
+//    }
+//}
+
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        Runnable runnable = () -> System.out.println("Hello World");
+//        new Thread(runnable).start();
+//    }
+//}
+
+//        MyThread myThread1 = new MyThread("thread1") ;
+//        MyThread myThread2 = new MyThread("thread2") ;
+//        MyThread myThread3 = new MyThread("thread3") ;
+//        new Thread(myThread1).start();
+//        new Thread(myThread2).start();
+//        new Thread(myThread3).start();
+
+//输出
+//thread1,i = 0
+//thread1,i = 1
+//thread1,i = 2
+//thread1,i = 3
+//thread1,i = 4
+//thread1,i = 5
+//thread2,i = 0
+//thread2,i = 1
+//thread2,i = 2
+//thread2,i = 3
+//thread2,i = 4
+//thread2,i = 5
+//thread2,i = 6
+//thread2,i = 7
+//thread2,i = 8
+//thread2,i = 9
+//thread1,i = 6
+//thread1,i = 7
+//thread1,i = 8
+//thread1,i = 9
+//thread3,i = 0
+//thread3,i = 1
+//thread3,i = 2
+//thread3,i = 3
+//thread3,i = 4
+//thread3,i = 5
+//thread3,i = 6
+//thread3,i = 7
+//thread3,i = 8
+//thread3,i = 9
+
+//输出
+//thread1,i = 0
+//thread3,i = 0
+//thread2,i = 0
+//thread2,i = 1
+//thread2,i = 2
+//thread3,i = 1
+//thread1,i = 1
+//thread1,i = 2
+//thread1,i = 3
+//thread1,i = 4
+//thread3,i = 2
+//thread2,i = 3
+//thread3,i = 3
+//thread1,i = 5
+//thread3,i = 4
+//thread2,i = 4
+//thread3,i = 5
+//thread1,i = 6
+//thread3,i = 6
+//thread3,i = 7
+//thread3,i = 8
+//thread3,i = 9
+//thread2,i = 5
+//thread2,i = 6
+//thread2,i = 7
+//thread1,i = 7
+//thread2,i = 8
+//thread2,i = 9
+//thread1,i = 8
+//thread1,i = 9
+
+//public class Test {
+//    public static void main(String[] args) {
+//        MyThread myThread1 = new MyThread("thread1") ;
+//        MyThread myThread2 = new MyThread("thread2") ;
+//        MyThread myThread3 = new MyThread("thread3") ;
+//        myThread1.run();
+//        myThread2.run();
+//        myThread3.run();
+//    }
+//}
+//
+////输出
+////thread1,i = 0
+////thread1,i = 1
+////thread1,i = 2
+////thread1,i = 3
+////thread1,i = 4
+////thread1,i = 5
+////thread1,i = 6
+////thread1,i = 7
+////thread1,i = 8
+////thread1,i = 9
+////thread2,i = 0
+////thread2,i = 1
+////thread2,i = 2
+////thread2,i = 3
+////thread2,i = 4
+////thread2,i = 5
+////thread2,i = 6
+////thread2,i = 7
+////thread2,i = 8
+////thread2,i = 9
+////thread3,i = 0
+////thread3,i = 1
+////thread3,i = 2
+////thread3,i = 3
+////thread3,i = 4
+////thread3,i = 5
+////thread3,i = 6
+////thread3,i = 7
+////thread3,i = 8
+////thread3,i = 9
+
+//class MyThread extends Thread {
+//    private int ticket = 10 ; // 一共10张票
+//        private String title ;
+//    public MyThread(String title) {
+//        this.title = title;
+//    }
+//
+//    @Override
+//    public void run() {
+//        while(this.ticket>0){
+//            System.out.println(title + "剩余票数："+this.ticket -- );
+//        }
+//    }}
+//public class Test {
+//    public static void main(String[] args) {
+//        new MyThread("一号").start();
+//        new MyThread("二号").start();
+//        new MyThread("三号").start();
+//    }
+//}
+////三号剩余票数：10
+////三号剩余票数：9
+////三号剩余票数：8
+////三号剩余票数：7
+////三号剩余票数：6
+////三号剩余票数：5
+////二号剩余票数：10
+////三号剩余票数：4
+////一号剩余票数：10
+////二号剩余票数：9
+////二号剩余票数：8
+////二号剩余票数：7
+////二号剩余票数：6
+////二号剩余票数：5
+////二号剩余票数：4
+////一号剩余票数：9
+////一号剩余票数：8
+////三号剩余票数：3
+////三号剩余票数：2
+////三号剩余票数：1
+////一号剩余票数：7
+////二号剩余票数：3
+////二号剩余票数：2
+////二号剩余票数：1
+////一号剩余票数：6
+////一号剩余票数：5
+////一号剩余票数：4
+////一号剩余票数：3
+////一号剩余票数：2
+////一号剩余票数：1
+
+import java.util.concurrent.*;
+
+//class MyThread implements Runnable {
+//    private int ticket = 10 ; // 一共10张票
+//    private String title ;
+//    public MyThread(String title) {
+//        this.title = title;
+//    }
+//
+//    @Override
+//    public void run() {
+//        while(this.ticket>0){
+//            System.out.println(title + "剩余票数："+this.ticket -- );
+//        }
+//    }
+//}
+//class MyThread implements Callable<String> {
+//    private int ticket = 10 ; // 一共10张票
+//    @Override
+//    public String call() throws Exception {
+//        while(this.ticket>0){
+//            System.out.println("剩余票数："+this.ticket -- );
+//        }
+//        return "票卖完了，下次吧。。。" ;
+//    }
+//}
+//
+//
+//
+//public class Test {
+//    public static void main(String[] args) throws Exception {
+//        FutureTask<String> task = new FutureTask<String >(new MyThread()) ;
+//        new Thread(task).start();
+//        new Thread(task).start();
+//        System.out.println(task.get());
+//    }
+//}
+//剩余票数：10
+//剩余票数：9
+//剩余票数：8
+//剩余票数：7
+//剩余票数：6
+//剩余票数：5
+//剩余票数：4
+//剩余票数：3
+//剩余票数：2
+//剩余票数：1
+//票卖完了，下次吧。。。
+
+//public class Test {
+//    public static void main(String[] args) {
+//        MyThread mt = new MyThread() ;
+//        new Thread(mt).start();
+//        new Thread(mt).start();
+//    }
+//}
+////一号剩余票数：10
+////一号剩余票数：8
+////一号剩余票数：7
+////一号剩余票数：6
+////一号剩余票数：9
+////一号剩余票数：4
+////一号剩余票数：3
+////一号剩余票数：5
+////一号剩余票数：2
+////一号剩余票数：1
+
+//class RunnableThread implements Runnable {
+//    @Override
+//    public void run() {
+//        for (int i = 0; i < 50; i++) {
+//            System.out.println(Thread.currentThread().getName() + "、" + i);
+//        }
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args){
+//        RunnableThread runnableThread = new RunnableThread();
+//        ThreadPoolExecutor threadPoolExecutor =
+//                new ThreadPoolExecutor(4,5,2000,TimeUnit.MILLISECONDS,
+//                        new LinkedBlockingDeque<Runnable>());
+//        for (int i = 0; i < 5; i++) {
+//            threadPoolExecutor.execute(runnableThread);
+//        }
+//    }
+//}
+
+class CallableThread implements Callable<String> {
+    @Override
+    public String call() throws Exception {
+            for (int i = 0; i < 50; i++) {
+                System.out.println(Thread.currentThread().getName() + "、" + i);
+            }
+            return Thread.currentThread().getName()+"任务执行完毕";
+     }
+}
+public class Test {
+    public static void main(String[] args){
+        CallableThread callableThread = new CallableThread();
+        ThreadPoolExecutor threadPoolExecutor =
+                new ThreadPoolExecutor(3,5,2000,TimeUnit.MILLISECONDS,
+                        new LinkedBlockingDeque<Runnable>());
+        for (int i = 0; i < 5; i++) {
+            Future<String> future = threadPoolExecutor.submit(callableThread);
+            try {
+                String str = future.get();
+                System.out.println(str);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
