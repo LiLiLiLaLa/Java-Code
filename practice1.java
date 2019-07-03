@@ -569,3 +569,624 @@ public class Test {
     }
 }
 //姓名：tim、年龄：18
+
+package xpu.edu;
+
+//class MyThread implements Runnable {
+//    private int ticket = 10 ; // 一共十张票
+//    @Override
+//    public void run() {
+//        while(this.ticket>0) { // 还有票
+//            try {
+//                Thread.sleep(200);
+//            } catch (InterruptedException e) {
+//// TODO Auto-generated catch block
+//                e.printStackTrace();
+//            } // 模拟网络延迟
+//            System.out.println(Thread.currentThread().getName()+",还有" +this.ticket --
+//                    +" 张票");
+//        }
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        MyThread mt = new MyThread() ;
+//        new Thread(mt,"黄牛A").start();
+//        new Thread(mt,"黄牛B").start();
+//        new Thread(mt,"黄牛C").start();
+//    }
+//}
+////黄牛C,还有10 张票
+////黄牛B,还有10 张票
+////黄牛A,还有9 张票
+////黄牛A,还有8 张票
+////黄牛C,还有8 张票
+////黄牛B,还有7 张票
+////黄牛B,还有6 张票
+////黄牛C,还有6 张票
+////黄牛A,还有6 张票
+////黄牛B,还有5 张票
+////黄牛A,还有5 张票
+////黄牛C,还有4 张票
+////黄牛A,还有3 张票
+////黄牛C,还有3 张票
+////黄牛B,还有3 张票
+////黄牛A,还有2 张票
+////黄牛B,还有1 张票
+////黄牛C,还有2 张票
+
+//class MyThread implements Runnable {
+//    private int ticket = 1000 ;
+//    @Override
+//    public void run() {
+//        //确保票能卖完
+//        for (int i = 0; i < 1000; i++) {
+//            // 在同一时刻，只允许一个线程进入代码块处理
+//            synchronized(this) { // 表示为程序逻辑上锁
+//                if(this.ticket>0) { // 还有票
+//                    try {
+//                        Thread.sleep(20);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    } // 模拟网络延迟
+//                    System.out.println(Thread.currentThread().getName()+",还有" +this.ticket -- +" 张票");
+//                }else {
+//                    break;
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//public class Test {
+//    public static void main(String[] args) {
+//        MyThread mt = new MyThread() ;
+//        Thread t1 = new Thread(mt,"黄牛A");
+//        Thread t2 = new Thread(mt,"黄牛B");
+//        Thread t3 = new Thread(mt,"黄牛C");
+//        t1.setPriority(Thread.MIN_PRIORITY);
+//        t2.setPriority(Thread.MAX_PRIORITY);
+//        t3.setPriority(Thread.MAX_PRIORITY);
+//        t1.start();
+//        t2.start();
+//        t3.start();
+//    }
+//}
+
+//class MyThread implements Runnable {
+//    private int ticket = 1000; // 一共十张票
+//    @Override
+//    public void run() {
+//        for (int i = 0; i < 1000; i++) {
+//            this.sale();
+//        }
+//    }
+//    public synchronized void sale() {
+//        if (this.ticket > 0) { // 还有票
+//            try {
+//                Thread.sleep(20);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            } // 模拟网络延迟
+//            System.out.println(Thread.currentThread().getName() + ",还有" + this.ticket-- + " 张票");
+//        }
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        MyThread mt = new MyThread();
+//        Thread t1 = new Thread(mt, "黄牛A");
+//        Thread t2 = new Thread(mt, "黄牛B");
+//        Thread t3 = new Thread(mt, "黄牛C");
+//        t1.setPriority(Thread.MIN_PRIORITY);
+//        t2.setPriority(Thread.MAX_PRIORITY);
+//        t3.setPriority(Thread.MAX_PRIORITY);
+//        t1.start();
+//        t2.start();
+//        t3.start();
+//    }
+//}
+
+//class Sync {
+//    public synchronized void test() {
+//        System.out.println("test方法开始，当前线程为 "+Thread.currentThread().getName());
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("test方法结束，当前线程为 "+Thread.currentThread().getName());
+//    }
+//}
+//class MyThread extends Thread {
+//    @Override
+//    public void run() {
+//        Sync sync = new Sync() ;
+//        sync.test();
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        for (int i = 0; i < 3 ; i++) {
+//            Thread thread = new MyThread() ;
+//            thread.start();
+//        }
+//    }
+//}
+////test方法开始，当前线程为 Thread-0
+////test方法开始，当前线程为 Thread-1
+////test方法开始，当前线程为 Thread-2
+////test方法结束，当前线程为 Thread-2
+////test方法结束，当前线程为 Thread-1
+////test方法结束，当前线程为 Thread-0
+
+//class Sync {
+//    public void test() {
+//        synchronized(this) {
+//            System.out.println("test方法开始，当前线程为 " +
+//                    Thread.currentThread().getName());
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("test方法结束，当前线程为 " +
+//                    Thread.currentThread().getName());
+//        }
+//    }
+//}
+//class MyThread extends Thread {
+//    private Sync sync ;
+//    public MyThread(Sync sync) {
+//        this.sync = sync ;
+//    }
+//    @Override
+//    public void run() {
+//        this.sync.test();
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        Sync sync = new Sync() ;
+//        for (int i = 0; i < 3 ; i++) {
+//            Thread thread = new MyThread(sync) ;
+//            thread.start();
+//        }
+//    }
+//}
+////test方法开始，当前线程为 Thread-0
+////test方法结束，当前线程为 Thread-0
+////test方法开始，当前线程为 Thread-2
+////test方法结束，当前线程为 Thread-2
+////test方法开始，当前线程为 Thread-1
+////test方法结束，当前线程为 Thread-1
+
+//class Sync {
+//    public void test() {
+//        synchronized(Sync.class) {
+//            System.out.println("test方法开始，当前线程为 " +
+//                    Thread.currentThread().getName());
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("test方法结束，当前线程为 " +
+//                    Thread.currentThread().getName());
+//        }
+//    }
+//}
+//class MyThread extends Thread {
+//    @Override
+//    public void run() {
+//        Sync sync = new Sync() ;
+//        sync.test();
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        for (int i = 0; i < 3 ; i++) {
+//            Thread thread = new MyThread() ;
+//            thread.start();
+//        }
+//    }
+//}
+////test方法开始，当前线程为 Thread-0
+////test方法结束，当前线程为 Thread-0
+////test方法开始，当前线程为 Thread-2
+////test方法结束，当前线程为 Thread-2
+////test方法开始，当前线程为 Thread-1
+////test方法结束，当前线程为 Thread-1
+
+//import java.util.concurrent.locks.Lock;
+//import java.util.concurrent.locks.ReentrantLock;
+//
+//class MyThread implements Runnable {
+//    private int ticket = 500;
+//    private Lock ticketLock = new ReentrantLock() ;
+//    @Override
+//    public void run() {
+//        for (int i = 0; i < 500; i++) {
+//            ticketLock.lock();
+//            try {
+//                if (this.ticket > 0) { // 还有票
+//                    try {
+//                        Thread.sleep(20);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    } // 模拟网络延迟
+//                    System.out.println(Thread.currentThread().getName() + ",还有" +
+//                            this.ticket-- + " 张票");
+//                }
+//            } finally {
+//                ticketLock.unlock();
+//            }
+//        }
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) {
+//        MyThread mt = new MyThread();
+//        Thread t1 = new Thread(mt, "黄牛A");
+//        Thread t2 = new Thread(mt, "黄牛B");
+//        Thread t3 = new Thread(mt, "黄牛C");
+//        t1.setPriority(Thread.MIN_PRIORITY);
+//        t2.setPriority(Thread.MAX_PRIORITY);
+//        t3.setPriority(Thread.MAX_PRIORITY);
+//        t1.start();
+//        t2.start();
+//        t3.start();
+//    }
+//}
+
+//public class Test {
+//    private static String commStr;
+//    private static ThreadLocal<String> threadStr = new ThreadLocal<String>();
+//    public static void main(String[] args) {
+//        commStr = "main";
+//        threadStr.set("main");
+//        Thread thread = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                commStr = "thread";
+//                threadStr.set("thread");
+//            }
+//        });
+//        thread.start();
+//        try {
+//            thread.join();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println(commStr);
+//        System.out.println(threadStr.get());
+//    }
+//}
+////thread
+////main
+
+//private void set(ThreadLocal key, Object value) {
+//        Entry[] tab = table;
+//        int len = tab.length;
+//        // 计算要存储的索引位置
+//        int i = key.threadLocalHashCode & (len-1);
+//        // 循环判断要存放的索引位置是否已经存在 Entry，若存在，进入循环体
+//        for (Entry e = tab[i];
+//        e != null;
+//        e = tab[i = nextIndex(i, len)]) {
+//            ThreadLocal k = e.get();
+//            // 若索引位置的 Entry 的 key 和要保存的 key 相等，则更新该 Entry 的值
+//            if (k == key) {
+//                e.value = value;
+//                return;
+//            }
+//            // 若索引位置的 Entry 的 key 为 null（key 已经被回收了），表示该位置的 Entry 已经无效，用要保存的键值替换该位置上的 Entry
+//            if (k == null) {
+//                replaceStaleEntry(key, value, i);
+//                return;
+//            }
+//        }
+//        // 要存放的索引位置没有 Entry，将当前键值作为一个 Entry 保存在该位置
+//        tab[i] = new Entry(key, value);
+//        // 增加 table 存储的条目数
+//        int sz = ++size;
+//        // 清除一些无效的条目并判断 table 中的条目数是否已经超出阈值
+//        if (!cleanSomeSlots(i, sz) && sz >= threshold)
+//        rehash(); // 调整 table 的容量，并重新摆放 table 中的 Entry
+//}
+
+//private void rehash() {
+//        // 先清除无效 Entry
+//        expungeStaleEntries();
+//        // 判断当前 table 中的条目数是否超出了阈值的 3/4
+//        if (size >= threshold - threshold / 4)
+//        resize();
+//}
+
+//private Entry getEntry(ThreadLocal key) {
+//        // 使用指定的 key 的 HashCode 计算索引位置
+//        int i = key.threadLocalHashCode & (table.length - 1);
+//        // 获取当前位置的 Entry
+//        Entry e = table[i];
+//        // 如果 Entry 不为 null 且 Entry 的 key 和 指定的 key 相等，则返回该 Entry
+//        // 否则调用 getEntryAfterMiss(ThreadLocal key, int i, Entry e) 方法
+//        if (e != null && e.get() == key)
+//            return e;
+//        else
+//            return getEntryAfterMiss(key, i, e);
+//}
+
+//private Entry getEntryAfterMiss(ThreadLocal key, int i, Entry e) {
+//        Entry[] tab = table;
+//        int len = tab.length;
+//        // 索引位置上的 Entry 不为 null 进入循环，为 null 则返回 null
+//        while (e != null) {
+//            ThreadLocal k = e.get();
+//            // 如果 Entry 的 key 和指定的 key 相等，则返回该 Entry
+//             if (k == key)
+//                return e;
+//             // 如果 Entry 的 key 为 null （key 已经被回收了），清除无效的 Entry
+//            // 否则获取下一个位置的 Entry，循环判断
+//            if (k == null)
+//                expungeStaleEntry(i);
+//            else
+//                i = nextIndex(i, len);
+//            e = tab[i];
+//        }
+//        return null;
+//}
+
+//public class Test{
+//    public static void main(String[] args) throws InterruptedException {
+//        Object object = new Object();
+//        synchronized (object) {
+//            System.out.println("等待中...");
+//            object.wait();
+//            System.out.println("等待已过...");
+//        }
+//        System.out.println("main方法结束...");
+//    }
+//}
+
+//class MyThread implements Runnable {
+//    private boolean flag;
+//    private Object obj;
+//    public MyThread(boolean flag, Object obj) {
+//        super();
+//        this.flag = flag;
+//        this.obj = obj;
+//    }
+//    public void waitMethod() {
+//        synchronized (obj) {
+//            try {
+//                while (true) {
+//                    System.out.println("wait()方法开始.. " +
+//                            Thread.currentThread().getName());
+//                    obj.wait();
+//                    System.out.println("wait()方法结束.. " +
+//                            Thread.currentThread().getName());
+//                    return;
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//    public void notifyMethod() {
+//        synchronized (obj) {
+//            try {
+//                System.out.println("notify()方法开始.. " +
+//                        Thread.currentThread().getName());
+//                obj.notify();
+//                System.out.println("notify()方法结束.. " +
+//                        Thread.currentThread().getName());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//    @Override
+//    public void run() {
+//        if (flag) {
+//            this.waitMethod();
+//        } else {
+//            this.notifyMethod();
+//        }
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) throws InterruptedException {
+//        Object object = new Object();
+//        MyThread waitThread = new MyThread(true, object);
+//        MyThread notifyThread = new MyThread(false, object);
+//        Thread thread1 = new Thread(waitThread, "wait线程");
+//        Thread thread2 = new Thread(notifyThread, "notify线程");
+//        thread1.start();
+//        Thread.sleep(1000);
+//        thread2.start();
+//        System.out.println("main方法结束!!");
+//    }
+//}
+////wait()方法开始.. wait线程
+////main方法结束!!
+////notify()方法开始.. notify线程
+////notify()方法结束.. notify线程
+////wait()方法结束.. wait线程
+
+//class MyThread implements Runnable {
+//    private boolean flag;
+//    private Object obj;
+//    public MyThread(boolean flag, Object obj) {
+//        super();
+//        this.flag = flag;
+//        this.obj = obj;
+//    }
+//    public void waitMethod() {
+//        synchronized (obj) {
+//            try {
+//                while (true) {
+//                    System.out.println("wait()方法开始.. " +
+//                            Thread.currentThread().getName());
+//                    obj.wait();
+//                    System.out.println("wait()方法结束.. " +
+//                            Thread.currentThread().getName());
+//                    return;
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//    public void notifyMethod() {
+//        synchronized (obj) {
+//            try {
+//                System.out.println("notify()方法开始.. " +
+//                        Thread.currentThread().getName());
+//                obj.notify();
+//                System.out.println("notify()方法结束.. " +
+//                        Thread.currentThread().getName());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//    @Override
+//    public void run() {
+//        if (flag) {
+//            this.waitMethod();
+//        } else {
+//            this.notifyMethod();
+//        }
+//    }
+//}
+//public class Test {
+//    public static void main(String[] args) throws InterruptedException {
+//        Object object = new Object();
+//        MyThread waitThread = new MyThread(true, object);
+//        MyThread notifyThread = new MyThread(false, object);
+//        Thread thread1 = new Thread(waitThread, "wait线程");
+//        Thread thread2 = new Thread(notifyThread, "notify线程");
+//        thread1.start();
+//        Thread.sleep(1000);
+//        thread2.start();
+//        System.out.println("main方法结束!!");
+//    }
+//}
+////wait()方法开始.. wait线程
+////main方法结束!!
+////notify()方法开始.. notify线程
+////notify()方法结束.. notify线程
+////wait()方法结束.. wait线程
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.Thread.sleep;
+
+class Goods {
+    //商品名
+    private String goodName;
+    //商品库存
+    private int count;
+
+    //生产方法
+    public synchronized void set(String goodName) throws InterruptedException {
+        if (this.count > 0) {
+            System.out.println("还有库存");
+            wait();
+        }
+        this.goodName = goodName;
+        this.count = count + 1;
+        Thread.sleep(1000);
+        System.out.println(Thread.currentThread().getName());
+        System.out.println(toString());
+        //生产完商品之后通知消费者可以消费了
+        notifyAll();
+    }
+
+
+
+
+    //消费方法
+    public synchronized void get() throws InterruptedException {
+        //此时如果还没有生产好的商品，就先等生产者生产
+        if(this.count == 0){
+            System.out.println("商品已售罄，请等待");
+            wait();
+        }
+        //每次消费一个产品
+        this.count = this.count - 1;
+        sleep(1000);
+        System.out.println(Thread.currentThread().getName());
+        System.out.println("消费" + toString());
+        //消费完商品可以通知生产者继续生产了
+        notifyAll();
+    }
+
+
+    @Override
+    public String toString() {
+        return "Goods{" + "goodName='" + goodName + '\'' + ", count=" + count + '}';
+    }
+}
+
+//生产者
+class Producer implements Runnable{
+    private Goods good;
+
+    public Producer(Goods good) {
+        this.good = good;
+    }
+
+    @Override
+    public void run() {
+        try {
+            this.good.set("红旗拖拉机一辆");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+//消费者
+class Consumer implements Runnable{
+    private Goods good;
+
+    public Consumer(Goods good) {
+        this.good = good;
+    }
+
+    @Override
+    public void run() {
+        try {
+            this.good.get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+public class Test {
+    public static void main(String[] args) throws InterruptedException {
+        Goods goods = new Goods();
+        // 存储生产、消费者线程
+        List<Thread> threadList = new ArrayList<>();
+        // 10个生产者线程
+        for (int i = 0; i < 10; i++) {
+            Thread produceThread = new Thread(new Producer(goods));
+            produceThread.setName("生产者线程 "+i);
+            threadList.add(produceThread);
+        }
+        // 6个消费者线程
+        for (int i = 0; i < 6; i++) {
+            Thread consumeThread = new Thread(new Consumer(goods));
+            consumeThread.setName("消费者线程 "+i);
+            threadList.add(consumeThread);
+        }
+        // 启动所有线程
+        for (Thread thread : threadList) {
+            thread.start();
+        }
+    }
+}
+
