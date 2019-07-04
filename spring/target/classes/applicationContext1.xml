@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Spring集合属性的注入-->
+    <!--注入数组类型-->
+    <bean id = "collectionBean" class="xpu.edu.CollectionBean">
+        <!--数组类型和list是一样的-->
+        <property name="arrs">
+            <list>
+                <value>张三</value>
+                <value>李四</value>
+                <value>王五</value>
+            </list>
+        </property>
+
+        <!--注入list集合-->
+        <property name="list">
+            <list>
+                <value>小可爱</value>
+                <value>小靓仔</value>
+                <value>小鸡儿</value>
+            </list>
+        </property>
+
+        <!--注入set集合-->
+        <property name="set">
+            <set>
+                <value>头发</value>
+                <value>鼻子</value>
+                <value>耳朵</value>
+            </set>
+        </property>
+
+        <!--注入map集合-->
+        <property name="map">
+            <map>
+                <entry key="小鸡" value="111"></entry>
+                <entry key="小猫" value="333"></entry>
+                <entry key="小狗" value="222"></entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>

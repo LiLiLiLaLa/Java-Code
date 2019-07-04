@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <!--Spring入门配置-->
+        <!--Spring入门配置-->
     <!--把类交给Spring管理-->
-    <bean id="userService" class="xpu.edu.UserServiceHibernateImpl"/>
+    <bean id="userService" class="xpu.edu.UserServiceImpl">
+        <property name="name" value="小靓仔"/>
+    </bean>
+
+    <!--Spring生命周期的配置
+    init-method="init2" destroy-method="destroy"
+    -->
+    <bean id="custemerDao" class="xpu.edu.CustemerDaoImpl" >
+    </bean>
+
+    <!--Spring属性注入方式-->
+    <!--&lt;!&ndash;set方法方式&ndash;&gt;-->
+    <!--<bean id="car" class="xpu.edu.Car">-->
+        <!--<property name="name" value="奔驰"/>-->
+        <!--<property name="price" value="18755"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;p名称空间的方式&ndash;&gt;-->
+    <!--<bean id="car" class="xpu.edu.Car" p:name="红旗推垃圾" p:price="4721898913"></bean>-->
+    <!--<bean id="employee" class="xpu.edu.Employee" p:name="小靓仔" p:car-ref="car"></bean>-->
+
+    <!--SpEL属性注入-->
+    <bean id="car" class="xpu.edu.Car">
+        <property name="name" value="#{'三蹦子'}"/>
+        <property name="price" value="#{15685}"/>
+    </bean>
+
+    <bean id="employee" class="xpu.edu.Employee">
+        <property name="name" value="#{'张飞'}"/>
+        <property name="car" value="#{car}"/>
+    </bean>
+
+    <!--&lt;!&ndash;set方法注入对象类型的属性&ndash;&gt;-->
+    <!--<bean id="employee" class="xpu.edu.Employee">-->
+        <!--<property name="name" value="小可爱"/>-->
+        <!--&lt;!&ndash;value是设置普通类型的值，ref用来设置其他类的id或name&ndash;&gt;-->
+        <!--<property name="car" ref="car"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;构造方法方式&ndash;&gt;-->
+    <!--<bean id="car" class="xpu.edu.Car">-->
+        <!--<constructor-arg  name="name"  value="宝马" />-->
+        <!--<constructor-arg  name="price" value="1837"/>-->
+    <!--</bean>-->
+
+    <import resource="applicationContext1.xml"/>
 
 </beans>

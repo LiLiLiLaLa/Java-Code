@@ -13,6 +13,7 @@ public class UserServiceImplTest {
      */
     public void demo1() {
         UserService u = new UserServiceImpl();
+        ((UserServiceImpl) u).setName("小靓仔");
         u.save();
     }
 
