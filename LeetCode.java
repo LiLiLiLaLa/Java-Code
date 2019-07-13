@@ -219,6 +219,25 @@ class Solution {
     }
 }
 
+35.第三十五题：搜索插入位置
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while(left <= right){
+            int mid = (left + right) >> 1;
+            if(nums[mid] == target){
+                return mid;
+            }else if(nums[mid] > target){
+                right = mid - 1;
+            }else{
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+}
+
 147.第一百四十七题：对链表进行插入排序
 class Solution {
     public ListNode insertionSortList(ListNode head) {
@@ -253,6 +272,10 @@ class Solution {
     }
 }
 
+182.第一百八十二题：查找重复的电子邮箱
+# having后面可以跟聚合函数作为分组条件，不符合条件的不显示
+select Email from person group by Email having count(Email) > 1;
+
 396.第三百九十六题：旋转函数
 class Solution {
     public int maxRotateFunction(int[] A) {
@@ -284,6 +307,35 @@ class Solution {
             max = (max > data) ? max : data;
         }
         return max;
+    }
+}
+
+539.第五百三十九题：最小时间差
+class Solution {
+    public int findMinDifference(List<String> timePoints) {
+        int[] times=new int[timePoints.size()];
+        int idx=0;
+        //将时间都转为分钟存储起来
+        for (String s:timePoints)
+        {
+            times[idx++]=getMinute(s);
+        }
+        //将时间从小到大排列，那么时差最小的两个时间必定相邻，注意第一个和最后一个
+        Arrays.sort(times);
+        //第一个和最后一个时间差
+        int res=times[0]+24*60-times[times.length-1];
+        //从前往后每两个时间点时差与res比较取小的
+        for (int i=1;i<times.length;i++)
+        {
+            res=Math.min(times[i]-times[i-1],res);
+        }
+        return res;
+    }
+
+    //将时间转化为分钟
+    private int getMinute(String s) {
+        String[] strs=s.split(":");
+        return Integer.parseInt(strs[0])*60+Integer.parseInt(strs[1]);
     }
 }
 
@@ -405,6 +457,43 @@ class Solution {
         return left + right;
     }
 }
+
+931. 第九百三十一题：下降路径最小和
+//dp[i][j]表示以A中第i行第j列位置为结束点时，对应的下降路劲最小和
+//dp[i][j] = min{dp[i-1][j], dp[i-1][j+1]} + A[i][j], j = 0(前面第一列)
+//dp[i][j] = min{dp[i-1][j-1], dp[i-1][j], dp[i-1][j+1]} + A[i][j], 1 < j < A.length-1 (中间列)
+//dp[i][j] = min{dp[i-1][j-1], dp[i-1][j]} + A[i][j], j = A.length-1(最后一列)
+class Solution {
+    public int minFallingPathSum(int[][] A) {
+        //行数
+        int len = A.length;
+        //正方形数组，所以行列相等，该数组每个位置存放的值是到达该位置的最小下降路径
+        int[][] dp = new int[len][len];
+        //填充第一行
+        for(int i = 0; i < len; i++){
+            dp[0][i] = A[0][i];
+        }
+        //从第二行填充所有位置的最小下降路径值
+        for(int i = 1; i < len; i++){
+            // 第一列计算
+            dp[i][0] = Math.min(dp[i-1][0], dp[i-1][1]) + A[i][0];
+            // 中间列计算
+            for(int j = 1; j < len-1; j++){
+                dp[i][j] = Math.min(Math.min(dp[i-1][j-1], dp[i-1][j]), dp[i-1][j+1]) + A[i][j];
+            }
+            // 最后一列计算
+            dp[i][len-1] = Math.min(dp[i-1][len-2], dp[i-1][len-1]) + A[i][len-1];
+        }
+        int res = Integer.MAX_VALUE;
+        // 求最后一行中的最小值
+        for(int j = 0; j < len; j++){
+            res = Math.min(res, dp[len-1][j]);
+        }
+        return res;
+    }
+}
+
+
 
 989.第九百八十九题：数组形式的整数加法
 class Solution {
