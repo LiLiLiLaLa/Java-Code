@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/xpu/edu/UserDaoImpl.java" line="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4201a1bd-25aa-415d-95ba-f20177779e44" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,44 +17,45 @@
     <session id="-1965803406">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3225" />
-          <entry key="xml" value="1091" />
+          <entry key="java" value="4953" />
+          <entry key="xml" value="1734" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3225" />
-          <entry key="XML" value="1091" />
+          <entry key="JAVA" value="4953" />
+          <entry key="XML" value="1734" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="55" />
-          <entry key="xml" value="16" />
+          <entry key="java" value="78" />
+          <entry key="xml" value="20" />
           <entry key="xsd" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="55" />
-          <entry key="XML" value="20" />
+          <entry key="JAVA" value="78" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.core.usages.trigger">
@@ -66,17 +70,70 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="91">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu/UserServiceImplTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/MyAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="160">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <folding>
+                <element signature="e#76#77#0" expanded="true" />
+                <element signature="e#118#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/UserDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <folding>
+                <element signature="e#101#102#0" expanded="true" />
+                <element signature="e#143#144#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +155,12 @@
       <find>Callable</find>
       <find>threadStatus</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
     <dirStrings>
       <dir>A:\Java Code\spring\src\main\java\xpu\edu</dir>
+      <dir>A:\Java Code\spring\src\main\java\xpu\edu1</dir>
     </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -113,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/test/java/xpu/edu/UserServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/xpu/edu/CustemerDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/xpu/edu/CustemerDaoImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/xpu/edu/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/xpu/edu/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/xpu/edu/CollectionBean.java" />
@@ -122,7 +182,19 @@
         <option value="$PROJECT_DIR$/target/classes/applicationContext1.xml" />
         <option value="$PROJECT_DIR$/target/classes/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext1.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/xpu/edu1/UserDaoImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu1/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu1/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu/JdkProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu1/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu1/CglibProxy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/xpu/edu/UserDaoImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu/MyAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xpu/edu/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/xpu/edu/Test.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -172,16 +244,15 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,6 +291,15 @@
               <item name="spring" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xpu" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,10 +323,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="xpu" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xpu" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -254,26 +348,26 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Class.java&#10;Class&#9;PSI&#9;JAVA://java.lang.Class&#10;newInstance()&#9;PSI&#9;JAVA://com.sun.corba.se.impl.io.ObjectStreamClass#newInstance&#10;fullyRelease&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedLongSynchronizer#fullyRelease&#10;addConditionWaiter&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedLongSynchronizer.ConditionObject#addConditionWaiter&#10;Condition&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/locks/Condition.java&#10;await()&#9;PSI&#9;JAVA://java.util.concurrent.locks.Condition#await&#10;await&#9;PSI&#9;JAVA://java.util.concurrent.locks.Condition#await&#10;tryAcquireShared&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedLongSynchronizer#tryAcquireShared&#10;acquireShared&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedSynchronizer#acquireShared&#10;ReentrantReadWriteLock&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReentrantReadWriteLock&#10;RejectedExecutionHandler&#9;PSI&#9;JAVA://java.util.concurrent.RejectedExecutionHandler&#10;Call&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/java/lang/Thread.class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562344062987" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563210966956" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/bookstore" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="xpu.edu" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="xpu.edu" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="xpu.edu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="A:\Java Code\spring\src\main\resources" />
@@ -291,21 +385,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test.Demo1">
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xpu.edu.Test" />
-      <module name="spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="xpu.edu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test.Demo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Test.demo1">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xpu.edu1.Test" />
       <module name="spring" />
       <extension name="coverage">
         <pattern>
@@ -313,15 +395,11 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="xpu.edu1" />
-      <option name="MAIN_CLASS_NAME" value="xpu.edu1.Test" />
-      <option name="METHOD_NAME" value="Demo1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest1.SpringDemo5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring" />
       <extension name="coverage">
         <pattern>
@@ -330,14 +408,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="xpu.edu" />
-      <option name="MAIN_CLASS_NAME" value="xpu.edu.UserServiceImplTest1" />
-      <option name="METHOD_NAME" value="SpringDemo5" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="xpu.edu.Test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest1.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.demo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring" />
       <extension name="coverage">
         <pattern>
@@ -346,14 +422,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="xpu.edu" />
-      <option name="MAIN_CLASS_NAME" value="xpu.edu.UserServiceImplTest1" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="MAIN_CLASS_NAME" value="xpu.edu.Test" />
+      <option name="METHOD_NAME" value="demo1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest1.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoImplTest.demo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring" />
       <extension name="coverage">
         <pattern>
@@ -362,27 +438,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="xpu.edu" />
-      <option name="MAIN_CLASS_NAME" value="xpu.edu.UserServiceImplTest1" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="MAIN_CLASS_NAME" value="xpu.edu.UserDaoImplTest" />
+      <option name="METHOD_NAME" value="demo1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoImplTest.demo2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xpu.edu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="xpu.edu" />
+      <option name="MAIN_CLASS_NAME" value="xpu.edu.UserDaoImplTest" />
+      <option name="METHOD_NAME" value="demo2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test (1)" />
-      <item itemvalue="JUnit.UserServiceImplTest1.test2" />
-      <item itemvalue="JUnit.UserServiceImplTest1.test3" />
-      <item itemvalue="JUnit.UserServiceImplTest1.SpringDemo5" />
-      <item itemvalue="JUnit.Test.Demo1" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="JUnit.UserDaoImplTest.demo1" />
+      <item itemvalue="JUnit.UserDaoImplTest.demo2" />
+      <item itemvalue="JUnit.Test" />
+      <item itemvalue="JUnit.Test.demo1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test.Demo1" />
-        <item itemvalue="Application.Test (1)" />
-        <item itemvalue="JUnit.UserServiceImplTest1.SpringDemo5" />
-        <item itemvalue="JUnit.UserServiceImplTest1.test3" />
-        <item itemvalue="JUnit.UserServiceImplTest1.test2" />
+        <item itemvalue="JUnit.Test.demo1" />
+        <item itemvalue="JUnit.Test" />
+        <item itemvalue="JUnit.UserDaoImplTest.demo2" />
+        <item itemvalue="JUnit.UserDaoImplTest.demo1" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -413,43 +505,48 @@
       <workItem from="1562217282251" duration="12351000" />
       <workItem from="1562245736986" duration="74000" />
       <workItem from="1562337170609" duration="5058000" />
+      <workItem from="1562567850772" duration="1841000" />
+      <workItem from="1562586558094" duration="1296000" />
+      <workItem from="1562936761622" duration="4234000" />
+      <workItem from="1562993023992" duration="4735000" />
+      <workItem from="1563190876161" duration="9441000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceImplTest1_test3 - 2019.07.01 at 17h 42m 30s.xml">
-      <configuration name="UserServiceImplTest1.test3" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 00h 41m 20s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_test3 - 2019.07.01 at 17h 45m 17s.xml">
-      <configuration name="UserServiceImplTest1.test3" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 00h 43m 04s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 13h 27m 58s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 00h 47m 37s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 13h 36m 56s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 00h 47m 56s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 13h 41m 54s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 00h 48m 58s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 13h 48m 51s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 00h 58m 31s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 13h 48m 52s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test_demo1 - 2019.07.16 at 01h 02m 11s.xml">
+      <configuration name="Test.demo1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 14h 00m 53s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test_demo1 - 2019.07.16 at 01h 10m 57s.xml">
+      <configuration name="Test.demo1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 14h 04m 17s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test - 2019.07.16 at 01h 11m 11s.xml">
+      <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest1_SpringDemo5 - 2019.07.04 at 14h 04m 37s.xml">
-      <configuration name="UserServiceImplTest1.SpringDemo5" configurationId="JUnit" />
+    <history-entry file="Test_demo1 - 2019.07.16 at 01h 14m 00s.xml">
+      <configuration name="Test.demo1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84149000" />
+    <option name="totallyTimeSpent" value="105696000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,8 +560,8 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49900597" visible="true" weight="0.28783783" />
-      <window_info id="Structure" order="1" sideWeight="0.500994" side_tool="true" weight="0.59326786" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49706745" visible="true" weight="0.23378378" />
+      <window_info id="Structure" order="1" sideWeight="0.50293255" side_tool="true" weight="0.2222973" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -472,7 +569,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32991204" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -493,6 +590,37 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32972974" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49706745" visible="true" weight="0.23378378" />
+      <window_info id="Structure" order="1" sideWeight="0.50293255" side_tool="true" weight="0.2222973" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.09530792" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32991204" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32991204" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="11" weight="0.32991204" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32789317" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32972974" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -501,20 +629,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="67" column="28" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/java/lang/Thread.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="49" selection-start-line="49" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -702,10 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46432">
           <caret line="1510" column="5" selection-start-line="1496" selection-start-column="3" selection-end-line="1510" selection-end-column="5" />
-          <folding>
-            <element signature="e#34439#34440#0" expanded="true" />
-            <element signature="e#34496#34497#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,13 +833,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -737,23 +841,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/applicationContext1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/applicationContext1.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,31 +856,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext1.xml" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu/UserServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        <state relative-caret-position="640">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext1.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu/UserServiceImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu1/UserDaoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1/CustomerDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#69#70#0" expanded="true" />
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu1/CglibProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/JdkProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu/UserDaoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xpu/edu/MyAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding>
+            <element signature="e#76#77#0" expanded="true" />
+            <element signature="e#118#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/xpu/edu/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="91">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -844,11 +1058,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|spring</last-edited>
+          <last-edited>spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -868,7 +1083,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: commons-logging:commons-logging:1.1.1</last-edited>
+          <last-edited>Maven: junit:junit:4.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
