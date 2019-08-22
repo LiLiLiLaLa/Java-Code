@@ -1155,11 +1155,13 @@ class Solution {
                 //用数组A当前位加上K对10取余即得到K对应位的值
                 temp+=K%10;
                 //K对10取整抛去已经合并过的最低位
+				
                 K=K/10;
             }
             //先判断当前是否有上次进位的值，有的话加到tmp
             if(jinwei==1){
                 temp+=jinwei;
+				
                 jinwei=0;
             }
             //要不要向下一次计算
@@ -1170,6 +1172,7 @@ class Solution {
             }else{
                 //不进位
                 list.add(temp);
+				
                 jinwei=0;
             }
         }
