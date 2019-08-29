@@ -636,3 +636,63 @@ ALTER TABLE sttu MODIFY id INT;
 ALTER TABLE sttu MODIFY id INT AUTO_INCREMENT;
 INSERT INTO sttu VALUES(NULL,'ddd');
 
+import java.util.Scanner;
+import java.util.concurrent.Semaphore;
+
+public class Main{
+    //使用信号量，定义三个信号量
+    private static Semaphore A = new Semaphore(1);
+    private static Semaphore B = new Semaphore(1);
+    private static Semaphore C = new Semaphore(1);
+
+    static class ThreadA extends Thread{
+        @Override
+        public void run() {
+            try{
+                //A先于B获取
+                A.acquire();
+                System.out.print("_A");
+                B.release();
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    static class ThreadB extends Thread{
+        @Override
+        public void run() {
+            try{
+                //B先于C获取
+                B.acquire();
+                System.out.print("_B");
+                C.release();
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    static class ThreadC extends Thread{
+        @Override
+        public void run() {
+            try{
+                //C获取
+                C.acquire();
+                System.out.print("_C");
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner cin = new Scanner(System.in);
+        StringBuffer str = new StringBuffer(cin.nextLine());
+        cin.close();
+        System.out.print(str);
+        new ThreadA().start();
+        new ThreadB().start();
+        new ThreadC().start();
+    }
+}
