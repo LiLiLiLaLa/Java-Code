@@ -1181,3 +1181,85 @@ class Solution {
         return list;
     }
 }
+
+//import java.util.LinkedHashMap;
+//import java.util.Scanner;
+//
+//public class Main{
+//    public static char FirstNotRepeatingChar(String str) {
+//        //str无效
+//        if (str == null || str.length() == 0)
+//            //传入的字符串无效，就会抛出下标越界异常
+//            return str.charAt(-1);
+//        //字符串转为字符数组
+//        char[] c = str.toCharArray();
+//        //定义LinkedHashMap存储字符和下标
+//        LinkedHashMap<Character,Integer> hash=new LinkedHashMap<Character,Integer>();
+//        for(char item : c) {
+//            //以char为key，已存在就在已有的key对应的value上+1存入，否则存入key和1
+//            if(hash.containsKey(item))
+//                hash.put(item, hash.get(item)+1);
+//            else
+//                hash.put(item, 1);
+//        }
+//        //第一个value为1的地方返回char
+//        for(int i = 0;i < str.length(); i++){
+//            if (hash.get(str.charAt(i)) == 1) {
+//                return str.charAt(i);
+//            }
+//        }
+//        //均重复就返回下标-1，实际上此时会抛出下标越界异常
+//        return str.charAt(-1);
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner cin = new Scanner(System.in);
+//        String str = new String(cin.nextLine());
+//        System.out.println(FirstNotRepeatingChar(str));
+//    }
+//}
+//
+////输入：aba      输出：b
+//// 输入：aabb     输出：java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+//// 输入：abac     输出：b
+//// 输入：abacb     输出：c
+//
+
+
+import java.util.Scanner;
+
+public class Main{
+    public static boolean IsIpv4(String str){
+        //无效字符串
+        if(str == null || str.length()==0){
+            return false;
+        }
+
+        //用点分割后不是四部分也无效
+        //注意，点是特殊字符，要用//转义
+        String[] part = str.split("\\.");
+        if(part.length != 4){
+            return false;
+        }
+
+        //转为int型，每一位在0和255范围
+        for (int i = 0; i < part.length; i++) {
+            int n = Integer.parseInt(part[i]);
+            if(n < 0 || n > 255){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner cin = new Scanner(System.in);
+        String str = cin.nextLine();
+        System.out.println(IsIpv4(str));
+    }
+}
+//输入：11.35.788.1        输出：false
+//输入：0.632      输出：false
+//输入：32.64.23.7.23      输出：false
+//输入：0.0.0.0        输出：true
+//输入：255.255.255.255        输出：true
